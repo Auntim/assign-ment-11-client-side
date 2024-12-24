@@ -5,16 +5,41 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Root from './components/root/Root';
+import AuthProviders from './provider/AuthProviders';
+import Home from './components/Home';
+import Login from './components/pages/Login';
+import Registrar from './components/pages/Registrar';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Root></Root>,
+    errorElement: <div>page not pound</div>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Registrar></Registrar>
+      }
+    ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <AuthProviders>
+        <RouterProvider router={router} />
+      </AuthProviders>
+    </HelmetProvider>
   </StrictMode>,
 )
