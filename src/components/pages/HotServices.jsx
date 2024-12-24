@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
 
+function HotServices() {
 
-function AllServices() {
     const [services, setService] = useState([])
 
     useEffect(() => {
@@ -26,4 +26,4 @@ function AllServices() {
     )
 }
 
-export default AllServices
+export default HotServices
