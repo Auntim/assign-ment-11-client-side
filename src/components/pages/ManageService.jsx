@@ -2,15 +2,16 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 
 
-function AddServices() {
+
+function ManageService() {
     return (
         <div>
             <Helmet>
-                <title>LEWIO | Add-Service</title>
+                <title>LEWIO | Manage-Service</title>
             </Helmet>
-            dfdfdf
+            fdfdfdf
         </div>
     )
 }
 
-export default AddServices
+export default ManageService

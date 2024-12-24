@@ -9,7 +9,9 @@ const Footer = () => {
                 <div className='flex flex-col items-center text-center'>
                     <div className='flex gap-2 items-center'>
                         <img className='w-auto h-7' src='' alt='' />
-                        <Link to={'/'}>LEWIO</Link>
+                        <Link to="/" className="text-2xl font-bold text-red-400">
+                            LEWIO
+                        </Link>
                     </div>
 
                     <div className='flex flex-wrap justify-center mt-6 -mx-4'>

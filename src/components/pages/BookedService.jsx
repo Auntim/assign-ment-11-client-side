@@ -2,15 +2,15 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async';
 
 
-function AddServices() {
+function BookedService() {
     return (
         <div>
             <Helmet>
-                <title>LEWIO | Add-Service</title>
+                <title>LEWIO | Booked-Services</title>
             </Helmet>
-            dfdfdf
+            ffdfdf
         </div>
     )
 }
 
-export default AddServices
+export default BookedService
