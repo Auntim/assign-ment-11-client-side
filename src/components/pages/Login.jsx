@@ -2,7 +2,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProviders';
 

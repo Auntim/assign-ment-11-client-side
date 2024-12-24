@@ -8,7 +8,7 @@ function Home() {
             <Helmet>
                 <title>LEWIO | Home</title>
             </Helmet>
-            <section className='mt-12'>
+            <section className='mt-24'>
                 <Carousel></Carousel>
             </section>
         </div>
