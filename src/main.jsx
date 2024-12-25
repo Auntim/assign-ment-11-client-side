@@ -20,12 +20,13 @@ import ServicesDetails from './components/pages/ServicesDetails';
 import PrivateRoute from './components/pages/PrivateRoute';
 import BookingService from './components/pages/BookingService';
 import UpdateService from './components/pages/UpdateService';
+import Erropage from './components/pages/Erropage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <div>page not pound</div>,
+    errorElement: <Erropage></Erropage>,
     children: [
       {
         path: '/',
