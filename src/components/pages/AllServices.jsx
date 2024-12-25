@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
+import { Helmet } from 'react-helmet-async';
+
 
 
 function AllServices() {
@@ -13,6 +15,9 @@ function AllServices() {
     }, [])
     return (
         <div>
+            <Helmet>
+                <title>LEWIO | All-Service</title>
+            </Helmet>
             <div className='text-center items-center my-6 '>
                 <h1 className='text-3xl font-semibold'>All Hot Service of the Day!!</h1>
                 <p className='text-[15px] opacity-70 text-gray-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vel doloremque dicta dolore necessitatibus et.</p>
