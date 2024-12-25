@@ -16,6 +16,7 @@ import ManageService from './components/pages/ManageService';
 import BookedService from './components/pages/BookedService';
 import ServiceToDo from './components/pages/ServiceToDo';
 import AllServices from './components/pages/AllServices';
+import ServicesDetails from './components/pages/ServicesDetails';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
       {
         path: 'services',
         element: <AllServices></AllServices>
+      },
+      {
+        path: '/services/:id',
+        element: <ServicesDetails></ServicesDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
         path: '/login',

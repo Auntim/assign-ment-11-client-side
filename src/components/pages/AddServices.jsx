@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
+import { Helmet } from 'react-helmet-async';
+
 
 const AddServices = () => {
     const { user } = useContext(AuthContext); // Get user information from Firebase Auth
@@ -68,6 +70,9 @@ const AddServices = () => {
 
     return (
         <div className="max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+            <Helmet>
+                <title>LEWIO | Add-services</title>
+            </Helmet>
             <h1 className="text-2xl font-bold mb-6 text-gray-800">Add Service</h1>
             <form onSubmit={handleAddService} className="space-y-4">
                 <div>
