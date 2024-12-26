@@ -9,7 +9,7 @@ const PopularService = () => {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/services");
+                const response = await axios.get("https://web-app-server-site.vercel.app/services");
                 setServices(response.data);
                 setLoading(false);
             } catch (error) {

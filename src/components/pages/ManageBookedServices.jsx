@@ -10,7 +10,7 @@ const ManageBookedServices = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/bookings?providerEmail=${user.email}`)
+            fetch(`https://web-app-server-site.vercel.app/bookings?providerEmail=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setBookings(data);
@@ -24,7 +24,7 @@ const ManageBookedServices = () => {
     }, [user?.email]);
 
     const handleStatusChange = (id, newStatus) => {
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://web-app-server-site.vercel.app/bookings/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

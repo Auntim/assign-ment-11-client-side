@@ -12,7 +12,7 @@ function ManageService() {
     // Fetch services added by the logged-in user
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/services?providerEmail=${user.email}`)
+            fetch(`https://web-app-server-site.vercel.app/services?providerEmail=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setServices(data);
@@ -37,7 +37,7 @@ function ManageService() {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/services/${id}`, {
+                fetch(`https://web-app-server-site.vercel.app/services/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

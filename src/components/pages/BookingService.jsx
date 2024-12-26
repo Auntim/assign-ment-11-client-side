@@ -22,7 +22,7 @@ function BookingService({ service, closeModal }) {
             serviceStatus: 'pending',
         };
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://web-app-server-site.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,9 +40,9 @@ function BookingService({ service, closeModal }) {
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-2/3 lg:w-1/2">
-                <h2 className="text-2xl font-semibold mb-4">Book Service</h2>
+        <div className="fixed inset-0 bg-black bg-opacity-50  flex justify-center items-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 m-12 w-11/12 md:w-2/3 lg:w-1/2">
+                <h2 className="text-2xl font-semibold mb-4 ">Book Service</h2>
 
                 <div className="grid gap-4">
                     <input
@@ -107,7 +107,7 @@ function BookingService({ service, closeModal }) {
                     />
                 </div>
 
-                <div className="flex justify-end mt-4">
+                <div className="flex justify-end mb-12">
                     <button
                         onClick={handleBooking}
                         className="btn btn-primary"

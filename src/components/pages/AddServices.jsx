@@ -34,7 +34,7 @@ const AddServices = () => {
 
         try {
             // Send service data to the database
-            const response = await fetch("http://localhost:5000/services", {
+            const response = await fetch("https://web-app-server-site.vercel.app/services", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const AllServices = () => {
     const [filteredServices, setFilteredServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://web-app-server-site.vercel.app/services")
             .then((res) => res.json())
             .then((data) => {
                 setServices(data);
@@ -37,7 +37,7 @@ const AllServices = () => {
                 />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
                 {filteredServices.length > 0 ? (
                     filteredServices.map((service) => (
                         <ServiceCard key={service._id} service={service} />

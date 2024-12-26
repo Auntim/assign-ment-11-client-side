@@ -17,7 +17,7 @@ function UpdateService() {
 
     // Fetch service data
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://web-app-server-site.vercel.app/services/${id}`)
             .then((res) => res.json())
             .then((data) => {
                 setService(data);
@@ -43,7 +43,7 @@ function UpdateService() {
     const handleUpdate = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:5000/services/${id}`, {
+        fetch(`https://web-app-server-site.vercel.app/services/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

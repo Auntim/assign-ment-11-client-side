@@ -11,7 +11,7 @@ const ServiceToDo = () => {
     useEffect(() => {
         if (user) {
             axios
-                .get(`http://localhost:5000/booked-services?providerEmail=${user.email}`)
+                .get(`https://web-app-server-site.vercel.app/booked-services?providerEmail=${user.email}`)
                 .then((res) => {
                     setBookings(res.data);
                     setLoading(false);
@@ -25,7 +25,7 @@ const ServiceToDo = () => {
 
     const handleStatusChange = (id, status) => {
         axios
-            .patch(`http://localhost:5000/update-booking-status/${id}`, { status })
+            .patch(`https://web-app-server-site.vercel.app/update-booking-status/${id}`, { status })
             .then((res) => {
                 if (res.data.success) {
                     setBookings((prev) =>

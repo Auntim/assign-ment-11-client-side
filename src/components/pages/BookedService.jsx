@@ -11,7 +11,7 @@ function BookedService() {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/bookings?userEmail=${user.email}`)
+            fetch(`https://web-app-server-site.vercel.app/bookings?userEmail=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setBookedServices(data);
