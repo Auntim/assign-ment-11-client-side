@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import { Helmet } from 'react-helmet-async';
+
 
 const AllServices = () => {
     const [services, setServices] = useState([]);
@@ -25,6 +27,9 @@ const AllServices = () => {
 
     return (
         <div className="w-11/12 mx-auto">
+            <Helmet>
+                <title>LEWIO | Services</title>
+            </Helmet>
             <h1 className="text-3xl font-bold my-6 text-center">All Services</h1>
 
             <div className="mb-6 text-center">
