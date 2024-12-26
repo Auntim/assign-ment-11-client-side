@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../provider/AuthProviders';
+import { Link } from 'react-router-dom';
 
 
 function BookedService() {
@@ -78,7 +79,11 @@ function BookedService() {
                                         </p>
                                     </div>
                                 </div>
+                                <Link to='/manage-booked-services'>
+                                    <button className='btn bg-orange-400 text-[14px] p-2 mt-4'>Manage Book</button>
+                                </Link>
                             </div>
+
                         ))}
                     </div>
                 )}

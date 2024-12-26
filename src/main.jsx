@@ -21,6 +21,7 @@ import PrivateRoute from './components/pages/PrivateRoute';
 import BookingService from './components/pages/BookingService';
 import UpdateService from './components/pages/UpdateService';
 import Erropage from './components/pages/Erropage';
+import ManageBookedServices from './components/pages/ManageBookedServices';
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/edit-service/:id",
         element: <UpdateService></UpdateService>
+      },
+      {
+        path: '/manage-booked-services',
+        element: <ManageBookedServices></ManageBookedServices>
       }
     ]
   },

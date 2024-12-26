@@ -1,34 +1,53 @@
-import React, { useEffect, useState } from 'react'
-import ServiceCard from './ServiceCard'
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect, useState } from "react";
+import ServiceCard from "./ServiceCard";
 
-
-
-function AllServices() {
-    const [services, setService] = useState([])
+const AllServices = () => {
+    const [services, setServices] = useState([]);
+    const [searchText, setSearchText] = useState("");
+    const [filteredServices, setFilteredServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
-            .then(res => res.json())
-            .then(data => setService(data))
+        fetch("http://localhost:5000/services")
+            .then((res) => res.json())
+            .then((data) => {
+                setServices(data);
+                setFilteredServices(data);
+            });
+    }, []);
 
-    }, [])
+    useEffect(() => {
+        const lowerCaseSearchText = searchText.toLowerCase();
+        const filtered = services.filter(service =>
+            service.serviceName.toLowerCase().includes(lowerCaseSearchText)
+        );
+        setFilteredServices(filtered);
+    }, [searchText, services]);
+
     return (
-        <div>
-            <Helmet>
-                <title>LEWIO | All-Service</title>
-            </Helmet>
-            <div className='text-center items-center my-6 '>
-                <h1 className='text-3xl font-semibold'>All Hot Service of the Day!!</h1>
-                <p className='text-[15px] opacity-70 text-gray-800'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vel doloremque dicta dolore necessitatibus et.</p>
+        <div className="w-11/12 mx-auto">
+            <h1 className="text-3xl font-bold my-6 text-center">All Services</h1>
+
+            <div className="mb-6 text-center">
+                <input
+                    type="text"
+                    placeholder="Search for a service..."
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    className="p-2 border w-full md:w-1/2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
             </div>
-            <div className='w-11/12 mx-auto my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                {
-                    services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
-                }
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filteredServices.length > 0 ? (
+                    filteredServices.map((service) => (
+                        <ServiceCard key={service._id} service={service} />
+                    ))
+                ) : (
+                    <p className="text-center text-gray-600">No services found for your search.</p>
+                )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default AllServices
+export default AllServices;
