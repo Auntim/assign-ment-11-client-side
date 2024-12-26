@@ -37,7 +37,7 @@ const AllServices = () => {
                 />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center rounded-lg">
                 {filteredServices.length > 0 ? (
                     filteredServices.map((service) => (
                         <ServiceCard key={service._id} service={service} />

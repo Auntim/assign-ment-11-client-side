@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProviders';
+import loginLotti from '../../assets/lotti/login.json'
+import Lottie from 'lottie-react';
 
 
 function Login() {
@@ -59,10 +61,13 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex justify-center items-center min-h-screen gap-4 bg-base-100">
             <Helmet>
                 <title>LEWIO | Login</title>
             </Helmet>
+            <div className='bg-base-100 rounded-lg p-6'>
+                <Lottie animationData={loginLotti}></Lottie>
+            </div>
             <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
                 <div className="card-body">
                     <h2 className="text-2xl font-bold mb-4">Login</h2>

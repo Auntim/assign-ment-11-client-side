@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 // import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../provider/AuthProviders';
 import { Helmet } from 'react-helmet-async';
+import registrationLotti from '../../assets/lotti/register.json'
+import Lottie from 'lottie-react';
 
 function Registrar() {
     const { createUser, setUser, updateuser } = useContext(AuthContext);
@@ -64,14 +66,14 @@ function Registrar() {
     };
 
     return (
-        <div className="flex card justify-center items-center min-h-screen bg-gray-100">
-            {/* <Helmet>
-                <title>LEWIO | Registrar</title>
-            </Helmet> */}
+        <div className="flex  justify-center items-center min-h-screen bg-gray-100">
             <Helmet>
                 <title>LEWIO | Registrar</title>
             </Helmet>
-            <div className="bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div className=' rounded-lg p-6'>
+                <Lottie animationData={registrationLotti}></Lottie>
+            </div>
+            <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
                 <form onSubmit={handleSignUp} className="card-body">
                     <h2 className="text-xl font-semibold">Register</h2>
                     <div className="form-control">

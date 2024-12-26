@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 function ServiceCard({ service }) {
     // const { imageUrl, serviceName, price, serviceArea, description, } = service
     return (
-        <div>
+        <div
+
+        >
             <img
                 src={service.imageUrl}
                 alt={service.serviceName}
@@ -35,6 +37,7 @@ function ServiceCard({ service }) {
                 </p>
                 <Link
                     to={`/services/${service._id}`}
+
                     className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
                 >
                     View Details

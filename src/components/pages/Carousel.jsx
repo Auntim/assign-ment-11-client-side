@@ -36,19 +36,19 @@ export default function Carousel() {
                 <SwiperSlide>
                     <Slide
                         image={bgimg1}
-                        text='Get Your Best place Done in minutes'
+                        text='Get Your Best Lawyer Done in minutes'
                     ></Slide>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
                         image={bgimg2}
-                        text='Get Your Mountain lovers place Done in minutes'
+                        text='Get Your Attorney lovers  Done in minutes'
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <Slide
                         image={bgimg3}
-                        text='Start Your  Campaigns up and running'
+                        text='Start Your Best Lawyer Campaigns up and running'
                     />
                 </SwiperSlide>
             </Swiper>
