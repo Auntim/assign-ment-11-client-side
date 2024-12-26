@@ -1,8 +1,8 @@
 ✌️Lewio - Lawyer Service Sharing ✌️
 
 Live Link:-https://laywer-service.web.app/
-Client Repu Link:
-Server Repu Link:
+Client Repu Link:https://github.com/programming-hero-web-course2/b10a11-client-side-Auntim
+Server Repu Link:https://github.com/programming-hero-web-course2/b10a11-server-side-Auntim
 
 
 About Lewio:👇
