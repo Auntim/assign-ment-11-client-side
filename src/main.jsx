@@ -68,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard/service-to-do",
-        element: <ServiceToDo></ServiceToDo>
+        element: <PrivateRoute> <ServiceToDo></ServiceToDo></PrivateRoute>
       },
       {
         path: "/edit-service/:id",

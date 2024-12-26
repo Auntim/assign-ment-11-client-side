@@ -79,7 +79,7 @@ function BookedService() {
                                         </p>
                                     </div>
                                 </div>
-                                <Link to='/manage-booked-services'>
+                                <Link to='/dashboard/manage-service'>
                                     <button className='btn bg-orange-400 text-[14px] p-2 mt-4'>Manage Book</button>
                                 </Link>
                             </div>

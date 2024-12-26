@@ -1,0 +1,50 @@
+[
+    {
+        "_id": "1",
+        "serviceName": "John Doe",
+        "category": "attorney",
+        "description": "Specialized in criminal defense and legal representation.",
+        "serviceArea": "Dhaka",
+        "imageUrl": "https://i.ibb.co.com/rmMy6Pg/Screenshot-21.png"
+    },
+    {
+        "_id": "2",
+        "serviceName": "Jane Smith",
+        "category": "attorney",
+        "description": "Expert in family law, divorce, and custody cases.",
+        "serviceArea": "Comilla",
+        "imageUrl": "https://i.ibb.co.com/CwDJb7s/Screenshot-22.png"
+    },
+    {
+        "_id": "3",
+        "serviceName": "Business Legal Advice",
+        "category": "service",
+        "description": "Legal solutions for small businesses and startups.",
+        "serviceArea": "Chittagong",
+        "imageUrl": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png"
+    },
+    {
+        "_id": "4",
+        "serviceName": "Business Legal Provider",
+        "category": "service",
+        "description": "Legal solutions for small businesses and startups.",
+        "serviceArea": "Chittagong",
+        "imageUrl": "https://i.ibb.co.com/T8jJ6S8/Screenshot-24.png"
+    },
+    {
+        "_id": "5",
+        "serviceName": "Business Man",
+        "category": "service",
+        "description": "Legal solutions for small businesses and startups.",
+        "serviceArea": "Chittagong",
+        "imageUrl": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png"
+    },
+    {
+        "_id": "6",
+        "serviceName": "Mark Attorney",
+        "category": "service",
+        "description": "Legal solutions for small businesses and startups.",
+        "serviceArea": "Chittagong",
+        "imageUrl": "https://i.ibb.co.com/rmMy6Pg/Screenshot-21.png"
+    }
+]

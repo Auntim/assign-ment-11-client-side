@@ -107,7 +107,7 @@ function BookingService({ service, closeModal }) {
                     />
                 </div>
 
-                <div className="flex justify-end mb-12">
+                <div className="flex justify-end mb-8 mt-4">
                     <button
                         onClick={handleBooking}
                         className="btn btn-primary"
