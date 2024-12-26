@@ -16,7 +16,7 @@ const MeetOurAttorneys = () => {
             <div className="container mx-auto">
                 <div className="text-center mb-8">
                     <h2 className="text-4xl font-bold text-gray-800">Meet Our Attorneys</h2>
-                    <p className="text-gray-600 mt-4">
+                    <p className="text-gray-600 text-xl mt-4">
                         Our experienced attorneys are here to provide expert legal advice and representation.
                     </p>
                 </div>
