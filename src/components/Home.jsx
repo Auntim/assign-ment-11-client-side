@@ -8,7 +8,7 @@ import Reviews from './pages/Reviews'
 
 function Home() {
     return (
-        <div className=''>
+        <div className='bg-gray-200'>
             <Helmet>
                 <title>LEWIO | Home</title>
             </Helmet>

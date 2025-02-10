@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 function ServiceCard({ service }) {
     // const { imageUrl, serviceName, price, serviceArea, description, } = service
     return (
-        <div
-
-        >
+        <div className='bg-purple-100 rounded-xl'>
             <img
                 src={service.imageUrl}
                 alt={service.serviceName}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover rounded-lg"
             />
             <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-700">

@@ -6,6 +6,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
 import { AiOutlineClose } from "react-icons/ai";
+import { GoLaw } from 'react-icons/go';
+import { FaSun, FaMoon } from 'react-icons/fa';
+
+
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
@@ -44,10 +48,10 @@ const Navbar = () => {
     }, [theme]);
 
     return (
-        <nav className="bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white">
-            <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                <Link to="/" className="text-2xl font-bold text-slate-700">
-                    LEWIO
+        <nav className="bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white dark:bg-gray-900 dark:text-white">
+            <div className="container mx-auto flex justify-between items-center py-4 px-6 ">
+                <Link to="/" className="text-2xl font-bold text-slate-700 flex items-center">
+                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> Attorney
                 </Link>
 
                 <ul className="hidden md:flex space-x-6">
@@ -145,12 +149,23 @@ const Navbar = () => {
 
                         </div>
                     )}
+
                     <div className="rounded bg-gray-200 dark:bg-gray-800">
                         <button
                             onClick={toggleTheme}
-                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 dark:bg-blue-700"
+                            className="px-4 py-2 bg-transparent text-white rounded flex items-center space-x-2"
                         >
-                            {theme === "light" ? "Dark" : "Light"} Mode
+                            {theme === 'light' ? (
+                                <>
+                                    <FaMoon className="w-5 h-5" />
+
+                                </>
+                            ) : (
+                                <>
+                                    <FaSun className="w-5 h-5" />
+
+                                </>
+                            )}
                         </button>
                     </div>
 

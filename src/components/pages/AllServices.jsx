@@ -30,7 +30,7 @@ const AllServices = () => {
             <Helmet>
                 <title>LEWIO | Services</title>
             </Helmet>
-            <h1 className="text-3xl font-bold my-6 text-center">All Services</h1>
+            <h1 className="text-3xl font-bold my-6 text-center mt-12">All Services</h1>
 
             <div className="mb-6 text-center">
                 <input
@@ -42,7 +42,7 @@ const AllServices = () => {
                 />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center rounded-lg bg-white">
                 {filteredServices.length > 0 ? (
                     filteredServices.map((service) => (
                         <ServiceCard key={service._id} service={service} />
