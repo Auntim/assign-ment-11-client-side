@@ -11,7 +11,7 @@ function Home() {
             <Helmet>
                 <title>LEWIO | Home</title>
             </Helmet>
-            <section className='mt-24'>
+            <section className=''>
                 <Carousel></Carousel>
             </section>
             <section className='mt-12'>

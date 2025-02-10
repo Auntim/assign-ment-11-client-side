@@ -5,10 +5,12 @@ import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
     const handleLogout = async () => {
@@ -42,9 +44,9 @@ const Navbar = () => {
     }, [theme]);
 
     return (
-        <nav className="bg-gray-800 text-white">
+        <nav className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                <Link to="/" className="text-2xl font-bold text-red-400">
+                <Link to="/" className="text-2xl font-bold text-slate-700">
                     LEWIO
                 </Link>
 
@@ -125,7 +127,7 @@ const Navbar = () => {
                             </Link>
                         </>
                     ) : (
-                        <div className="relative group">
+                        <div className="relative group flex gap-2">
                             <img
                                 src={user.photoURL || <FaUserCircle className="text-3xl" />}
                                 alt="User"
@@ -140,23 +142,79 @@ const Navbar = () => {
                                     Logout
                                 </button>
                             </div>
+
                         </div>
                     )}
+                    <div className="rounded bg-gray-200 dark:bg-gray-800">
+                        <button
+                            onClick={toggleTheme}
+                            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 dark:bg-blue-700"
+                        >
+                            {theme === "light" ? "Dark" : "Light"} Mode
+                        </button>
+                    </div>
+
+                    <div className="md:hidden flex items-center">
+                        {isMenuOpen ? (
+                            <AiOutlineClose
+                                className="text-3xl cursor-pointer"
+                                onClick={() => setIsMenuOpen(false)}
+                            />
+                        ) : (
+                            <GiHamburgerMenu
+                                className="text-3xl cursor-pointer"
+                                onClick={() => setIsMenuOpen(true)}
+                            />
+                        )}
+                    </div>
                 </div>
-                <div className="rounded bg-gray-200 dark:bg-gray-800">
-                    <button
-                        onClick={toggleTheme}
-                        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 dark:bg-blue-700"
-                    >
-                        {theme === "light" ? "Dark" : "Light"} Mode
-                    </button>
-                </div>
+
             </div>
 
+
+            {isMenuOpen && (
+                <ul className="md:hidden  bg-violet-500 space-y-4 p-4">
+                    <li>
+                        <Link
+                            to="/dashboard/add-service"
+                            className="block px-3 py-2 hover:bg-gray-700 rounded"
+                        >
+                            Add Service
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/dashboard/manage-service"
+                            className="block px-3 py-2 hover:bg-gray-700 rounded"
+                        >
+                            Manage Service
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/dashboard/booked-services"
+                            className="block px-3 py-2 hover:bg-gray-700 rounded"
+                        >
+                            Booked Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/dashboard/service-to-do"
+                            className="block px-3 py-2 hover:bg-gray-700 rounded"
+                        >
+                            Service To-Do
+                        </Link>
+                    </li>
+
+                </ul>
+            )}
+
+
             {/* Mobile Menu */}
-            <div className="md:hidden flex justify-between px-6 py-4">
+            {/* <div className="md:hidden flex justify-between px-6 py-4">
                 <GiHamburgerMenu className="text-3xl" />
-            </div>
+            </div> */}
         </nav>
     );
 };
