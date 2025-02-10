@@ -119,10 +119,10 @@ const Navbar = () => {
                 <div className="flex justify-center items-center space-x-4">
                     {!user ? (
                         <>
-                            <Link to="/login" className="hover:text-yellow-500">
+                            <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white">
                                 Login
                             </Link>
-                            <Link to="/register" className="hover:text-yellow-500">
+                            <Link to="/register" className="hover:text-yellow-500 text-white font-semibold btn btn-outline">
                                 Register
                             </Link>
                         </>
@@ -133,11 +133,11 @@ const Navbar = () => {
                                 alt="User"
                                 className="w-10 h-10 rounded-full border-2 border-yellow-500 cursor-pointer"
                             />
-                            <div className="absolute hidden group-hover:block bg-black text-white rounded shadow-lg p-4 top-12 right-0">
+                            <div className="absolute hidden group-hover:block bg-black text-white rounded-2xl shadow-lg p-4 top-12 right-0">
                                 <p className="font-semibold">{user.displayName || "User"}</p>
                                 <button
                                     onClick={handleLogout}
-                                    className="hover:text-yellow-500 hover:underline mt-2 text-xl"
+                                    className="hover:text-yellow-500  btn btn-outline text-white mt-2 text-xl"
                                 >
                                     Logout
                                 </button>

@@ -12,20 +12,20 @@ const MeetOurAttorneys = () => {
     }, []);
 
     return (
-        <div className="py-12 bg-gray-100">
+        <div className="py-12">
             <div className="container mx-auto">
                 <div className="text-center mb-8">
-                    <h2 className="text-4xl font-bold text-gray-800">Meet Our Attorneys</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold text-orange-800">Meet Our Attorneys</h2>
                     <p className="text-gray-600 text-xl mt-4">
                         Our experienced attorneys are here to provide expert legal advice and representation.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-8 md:mx-0">
                     {attorneys.length > 0 ? (
                         attorneys.map((attorney) => (
                             <div
                                 key={attorney._id}
-                                className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition duration-300"
+                                className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-2xl hover:border-2 transition duration-300"
                             >
                                 <img
                                     src={attorney.imageUrl}

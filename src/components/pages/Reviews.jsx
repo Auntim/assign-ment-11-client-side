@@ -10,14 +10,14 @@ const reviews = [
         id: 1,
         name: 'John Doe',
         image: 'https://i.ibb.co.com/rmMy6Pg/Screenshot-21.png', // Placeholder image URL
-        rating: 5,
+        rating: 3,
         text: 'Amazing service! The team was very professional and delivered beyond my expectations.',
     },
     {
         id: 2,
         name: 'Jane Smith',
         image: 'https://i.ibb.co.com/T8jJ6S8/Screenshot-24.png', // Placeholder image URL
-        rating: 5,
+        rating: 4,
         text: 'I highly recommend this company. They are reliable, efficient, and friendly.',
     },
     {
@@ -38,7 +38,7 @@ const reviews = [
         id: 5,
         name: 'Md Rahim',
         image: 'https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png',
-        rating: 5,
+        rating: 4,
         text: 'Great work! I will definitely use their services again.',
     },
     {

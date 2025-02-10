@@ -8,7 +8,7 @@ import Reviews from './pages/Reviews'
 
 function Home() {
     return (
-        <div>
+        <div className=''>
             <Helmet>
                 <title>LEWIO | Home</title>
             </Helmet>

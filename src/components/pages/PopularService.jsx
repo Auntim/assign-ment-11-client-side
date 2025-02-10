@@ -28,16 +28,16 @@ const PopularService = () => {
     return (
         <section className="py-10 ">
             <div className="container mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-3 text-gray-800">
+                <h2 className="text-2xl md:text-4xl font-bold text-center mb-3 text-orange-700">
                     Popular Services
                 </h2>
                 <p className="text-center text-xl text-gray-800 mb-8">Discover the most popular services handpicked for you.</p>
 
-                <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-3 mx-6 md:mx-0">
                     {services.slice(0, 6).map((service) => (
                         <div
                             key={service._id}
-                            className="bg-white shadow-md rounded-lg overflow-hidden"
+                            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-2xl"
                         >
                             <img
                                 src={service.imageUrl}
