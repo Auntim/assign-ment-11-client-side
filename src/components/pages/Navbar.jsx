@@ -49,9 +49,9 @@ const Navbar = () => {
 
     return (
         <nav className="bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white dark:bg-gray-900 dark:text-white">
-            <div className="container mx-auto flex justify-between items-center py-4 px-6 ">
-                <Link to="/" className="text-2xl font-bold text-slate-700 flex items-center">
-                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> Attorney
+            <div className="w-full md:container mx-auto flex justify-between items-center py-4 px-6 ">
+                <Link to="/" className="text-xl md:text-2xl font-bold text-slate-700 flex items-center">
+                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> <span className="hidden md:flex">Attorney</span>
                 </Link>
 
                 <ul className="hidden md:flex space-x-6">
@@ -120,10 +120,10 @@ const Navbar = () => {
                     )}
                 </ul>
 
-                <div className="flex justify-center items-center space-x-4">
+                <div className="flex justify-center items-center ">
                     {!user ? (
                         <>
-                            <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white">
+                            <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white mr-2">
                                 Login
                             </Link>
                             <Link to="/register" className="hover:text-yellow-500 text-white font-semibold btn btn-outline">
@@ -150,7 +150,7 @@ const Navbar = () => {
                         </div>
                     )}
 
-                    <div className="rounded bg-gray-200 dark:bg-gray-800">
+                    <div className="rounded bg-gray-200 dark:bg-gray-800 mx-1">
                         <button
                             onClick={toggleTheme}
                             className="px-4 py-2 bg-transparent text-white rounded flex items-center space-x-2"

@@ -73,7 +73,7 @@ function Registrar() {
             <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={registrationLotti}></Lottie>
             </div>
-            <div className="card border-2 mt-12 text-white w-full max-w-sm shadow-2xl">
+            <div className="card border-2 mt-24 text-white w-full max-w-sm shadow-2xl mx-6 md:mx-0">
                 <form onSubmit={handleSignUp} className="card-body">
                     <h2 className="text-xl md:text-2xl text-center font-bold">Create Account</h2>
                     <div className="form-control">
@@ -84,7 +84,7 @@ function Registrar() {
                             type="text"
                             placeholder="name"
                             name="name"
-                            className="input input-bordered"
+                            className="input input-bordered text-black"
                             required
                         />
                     </div>
@@ -96,7 +96,7 @@ function Registrar() {
                             type="text"
                             placeholder="Photo url"
                             name="photo"
-                            className="input input-bordered"
+                            className="input input-bordered text-black"
                             required
                         />
                     </div>
@@ -108,7 +108,7 @@ function Registrar() {
                             type="email"
                             placeholder="email"
                             name="email"
-                            className="input input-bordered"
+                            className="input input-bordered text-black"
                             required
                         />
                     </div>
@@ -120,7 +120,7 @@ function Registrar() {
                             type="password"
                             placeholder="password"
                             name="password"
-                            className="input input-bordered"
+                            className="input input-bordered text-black"
                             required
                         />
                         <label className="flex justify-center items-center">

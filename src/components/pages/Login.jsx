@@ -68,7 +68,7 @@ function Login() {
             <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={loginLotti}></Lottie>
             </div>
-            <div className="card text-white w-full max-w-sm shadow-2xl border-2">
+            <div className="card text-white w-full max-w-sm shadow-2xl border-2 mx-6 md:mx-0 mt-24">
                 <div className="card-body">
                     <h2 className="text-2xl font-bold mb-4 text-center">Login Now!</h2>
 
@@ -79,7 +79,7 @@ function Login() {
                                 type="email"
                                 name="email"
                                 placeholder="Enter your email"
-                                className={`input input-bordered w-full ${errors.email ? 'border-red-500' : ''}`}
+                                className={`input input-bordered w-full text-black ${errors.email ? 'border-red-500' : ''}`}
                                 {...register('email', {
                                     required: 'Email is required',
                                     pattern: {
@@ -99,7 +99,7 @@ function Login() {
                                 type="password"
                                 name="password"
                                 placeholder="Enter your password"
-                                className={`input input-bordered w-full ${errors.password ? 'border-red-500' : ''}`}
+                                className={`input input-bordered w-full text-black ${errors.password ? 'border-red-500' : ''}`}
                                 {...register('password', {
                                     required: 'Password is required',
                                     minLength: {
