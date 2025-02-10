@@ -61,16 +61,16 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen gap-4 bg-base-100">
+        <div className="flex justify-center items-center min-h-screen gap-4 bg-gradient-to-r from-purple-600 to-gray-500">
             <Helmet>
                 <title>LEWIO | Login</title>
             </Helmet>
-            <div className='bg-base-100 rounded-lg p-6'>
+            <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={loginLotti}></Lottie>
             </div>
-            <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+            <div className="card text-white w-full max-w-sm shadow-2xl border-2">
                 <div className="card-body">
-                    <h2 className="text-2xl font-bold mb-4">Login</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center">Login Now!</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                         <div>
@@ -115,7 +115,7 @@ function Login() {
 
                         {/* Submit Button */}
                         <button type="submit" className="btn btn-primary w-full">Login</button>
-                        <p className='text-center'>
+                        <p className='text-center text-white'>
                             Don't have an account? <Link to="/register" className="text-blue-500 hover:underline">Register</Link>
                         </p>
                     </form>

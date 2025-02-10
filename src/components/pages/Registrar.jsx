@@ -66,19 +66,19 @@ function Registrar() {
     };
 
     return (
-        <div className="flex  justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex  justify-center items-center min-h-screen bg-gradient-to-r from-purple-600 to-gray-500">
             <Helmet>
                 <title>LEWIO | Registrar</title>
             </Helmet>
-            <div className=' rounded-lg p-6'>
+            <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={registrationLotti}></Lottie>
             </div>
-            <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+            <div className="card border-2 mt-12 text-white w-full max-w-sm shadow-2xl">
                 <form onSubmit={handleSignUp} className="card-body">
-                    <h2 className="text-xl font-semibold">Register</h2>
+                    <h2 className="text-xl md:text-2xl text-center font-bold">Create Account</h2>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="text-xl font-semibold">Name</span>
                         </label>
                         <input
                             type="text"
@@ -90,7 +90,7 @@ function Registrar() {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Photo Url</span>
+                            <span className="text-xl font-semibold">Photo Url</span>
                         </label>
                         <input
                             type="text"
@@ -102,7 +102,7 @@ function Registrar() {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="text-xl font-semibold">Email</span>
                         </label>
                         <input
                             type="email"
@@ -114,7 +114,7 @@ function Registrar() {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="text-xl font-semibold">Password</span>
                         </label>
                         <input
                             type="password"
@@ -124,7 +124,7 @@ function Registrar() {
                             required
                         />
                         <label className="flex justify-center items-center">
-                            <p className="text-center my-3 label-text-alt text-[18px]">
+                            <p className="text-center my-3 label-text-alt text-white text-[18px]">
                                 Already have an Account?{' '}
                                 <span>
                                     <Link to="/login" className="text-blue-500 hover:underline">

@@ -44,7 +44,7 @@ const Navbar = () => {
     }, [theme]);
 
     return (
-        <nav className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+        <nav className="bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white">
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
                 <Link to="/" className="text-2xl font-bold text-slate-700">
                     LEWIO
