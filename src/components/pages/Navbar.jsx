@@ -7,7 +7,8 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
 import { AiOutlineClose } from "react-icons/ai";
 import { GoLaw } from 'react-icons/go';
-import { FaSun, FaMoon } from 'react-icons/fa';
+// import { FaSun, FaMoon } from 'react-icons/fa';
+import ThemeToggle from "../ThemeToggle";
 
 
 
@@ -15,7 +16,7 @@ const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
     const handleLogout = async () => {
         try {
@@ -37,15 +38,15 @@ const Navbar = () => {
         }
     };
 
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-    };
+    // const toggleTheme = () => {
+    //     const newTheme = theme === "light" ? "dark" : "light";
+    //     setTheme(newTheme);
+    //     localStorage.setItem("theme", newTheme);
+    // };
 
-    useEffect(() => {
-        document.body.className = theme;
-    }, [theme]);
+    // useEffect(() => {
+    //     document.body.className = theme;
+    // }, [theme]);
 
     return (
         <nav className="bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white dark:bg-gray-900 dark:text-white">
@@ -126,7 +127,7 @@ const Navbar = () => {
                             <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white mr-2">
                                 Login
                             </Link>
-                            <Link to="/register" className="hover:text-yellow-500 text-white font-semibold btn btn-outline">
+                            <Link to="/register" className="hover:text-yellow-500 text-white font-semibold btn btn-outline mr-2">
                                 Register
                             </Link>
                         </>
@@ -149,8 +150,11 @@ const Navbar = () => {
 
                         </div>
                     )}
-
-                    <div className="rounded bg-gray-200 dark:bg-gray-800 mx-1">
+                    <div>
+                        <ThemeToggle />
+                    </div>
+                    {/* <div className="rounded bg-gray-200 dark:bg-gray-800 mx-1">
+                        
                         <button
                             onClick={toggleTheme}
                             className="px-4 py-2 bg-transparent text-white rounded flex items-center space-x-2"
@@ -167,7 +171,7 @@ const Navbar = () => {
                                 </>
                             )}
                         </button>
-                    </div>
+                    </div> */}
 
                     <div className="md:hidden flex items-center">
                         {isMenuOpen ? (
