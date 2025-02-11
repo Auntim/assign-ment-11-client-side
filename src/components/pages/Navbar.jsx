@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext,  useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 // import { useAuth } from "../hooks/useAuth";
 import { FaUserCircle } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { CgMenuRightAlt  } from "react-icons/cg";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
 import { AiOutlineClose } from "react-icons/ai";
@@ -16,7 +16,6 @@ const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
     const handleLogout = async () => {
         try {
@@ -141,7 +140,7 @@ const Navbar = () => {
 
                         </div>
                     )}
-                    <div className="md:mx-2">
+                    <div className="mx-2 md:mx-3">
                         <ThemeToggle />
                     </div>
 
@@ -153,19 +152,18 @@ const Navbar = () => {
                                 onClick={() => setIsMenuOpen(false)}
                             />
                         ) : (
-                            <GiHamburgerMenu
+                            <CgMenuRightAlt 
                                 className="text-3xl cursor-pointer"
                                 onClick={() => setIsMenuOpen(true)}
                             />
                         )}
                     </div>
                 </div>
-
             </div>
 
 
             {isMenuOpen && (
-                <ul className="md:hidden  bg-violet-500 space-y-4 p-4">
+                <ul className="md:hidden  bg-violet-500 dark:bg-medium dark:text-white space-y-4 p-4">
                     <li>
                         <Link
                             to="/dashboard/add-service"
