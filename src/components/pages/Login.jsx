@@ -61,14 +61,14 @@ function Login() {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen gap-4 bg-gradient-to-r from-purple-600 to-gray-500">
+        <div className="flex justify-center items-center min-h-screen gap-4 dark:bg-gradient-to-r dark:from-gray-800 dark:to-medium bg-gradient-to-r from-purple-600 to-gray-500 ">
             <Helmet>
                 <title>LEWIO | Login</title>
             </Helmet>
             <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={loginLotti}></Lottie>
             </div>
-            <div className="card text-white w-full max-w-sm shadow-2xl border-2 mx-6 md:mx-0 mt-24">
+            <div className="card text-white w-full max-w-sm shadow-2xl border-2 mx-6 md:mx-0 mt-24 ">
                 <div className="card-body">
                     <h2 className="text-2xl font-bold mb-4 text-center">Login Now!</h2>
 
@@ -126,7 +126,7 @@ function Login() {
                     {/* Google Sign-In Button */}
                     <button
                         onClick={handleGoogleLogin}
-                        className="btn btn-outline w-full flex items-center justify-center gap-2"
+                        className="btn btn-outline w-full flex items-center justify-center gap-2 dark:text-white"
                     >
                         <FaGoogle className="w-5 h-5" />
                         Sign in with Google

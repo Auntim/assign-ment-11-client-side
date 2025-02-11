@@ -2,6 +2,9 @@ import React, { useEffect, useState, useContext } from "react";
 import Swal from "sweetalert2";
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from "../../provider/AuthProviders";
+import { FaPenToSquare } from "react-icons/fa6";
+import { FaTrashCan } from "react-icons/fa6";
+
 
 
 function ManageService() {
@@ -63,11 +66,11 @@ function ManageService() {
     };
 
     return (
-        <div className="container mx-auto my-10">
+        <div className="px-12 py-12 mx-auto my-10 dark:bg-medium">
             <Helmet>
                 <title>LEWIO | Manage-Service</title>
             </Helmet>
-            <h1 className="text-3xl font-semibold text-center mb-6">
+            <h1 className="text-3xl font-semibold text-center mt-6 mb-6 dark:text-white">
                 Manage Your Services
             </h1>
 
@@ -82,36 +85,36 @@ function ManageService() {
                     {services.map((service) => (
                         <div
                             key={service._id}
-                            className="p-4 bg-white shadow-md rounded-lg border border-gray-200"
+                            className="p-4 bg-white shadow-md rounded-lg border border-gray-200 dark:bg-medium"
                         >
                             <img
                                 src={service.imageUrl}
                                 alt={service.serviceName}
                                 className="w-full h-48 object-cover rounded-md"
                             />
-                            <h2 className="mt-4 text-lg font-semibold">
-                                {service.serviceName}
+                            <h2 className="mt-4 text-lg font-semibold dark:text-white">
+                                Name: {service.serviceName}
                             </h2>
-                            <p className="text-gray-600 mt-2">{service.description}</p>
-                            <p className="text-gray-600 mt-2">
-                                <strong>Price:</strong> ${service.price}
+                            <p className="text-gray-600 mt-2 dark:text-white">{service.description}</p>
+                            <p className="text-gray-600 mt-2 dark:text-white">
+                                <strong>Price:</strong>Price: ${service.price}
                             </p>
-                            <p className="text-gray-600 mt-2">
+                            <p className="text-gray-600 mt-2 dark:text-white">
                                 <strong>Area:</strong> {service.serviceArea}
                             </p>
 
                             <div className="mt-4 flex justify-start gap-3">
                                 <button
                                     onClick={() => handleEdit(service._id)}
-                                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                                    className="px-3 py-2 bg-blue-400 text-white rounded hover:bg-blue-600"
                                 >
-                                    Edit
+                                    <FaPenToSquare className="h-6 w-6" />
                                 </button>
                                 <button
                                     onClick={() => handleDelete(service._id)}
-                                    className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-red-600"
+                                    className=" dark:text-white rounded btn dark:btn-outline border border-b-2 bg-gray-400 text-white items-center"
                                 >
-                                    Delete
+                                    <FaTrashCan className="h-6 w-6 text-orange-800" />
                                 </button>
                             </div>
                         </div>

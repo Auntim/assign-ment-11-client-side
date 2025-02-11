@@ -69,63 +69,63 @@ const AddServices = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+        <div className=" mx-auto bg-gray-100 p-6 rounded-lg shadow-md dark:bg-gradient-to-r dark:from-gray-800 dark:to-medium">
             <Helmet>
                 <title>LEWIO | Add-services</title>
             </Helmet>
-            <h1 className="text-2xl font-bold mb-6 text-gray-800">Add Service</h1>
-            <form onSubmit={handleAddService} className="space-y-4">
-                <div>
-                    <label className="block font-medium text-gray-700">Image URL</label>
+            <h1 className="text-2xl md:text-4xl font-bold mb-6 text-gray-800 dark:text-white mt-24 text-center">Add Service</h1>
+            <form onSubmit={handleAddService} className="space-y-4 max-w-2xl items-center mx-auto dark:text-white p-8">
+                <div className="dark:bg-gradient-to-r dark:from-gray-800 ">
+                    <label className="block font-medium text-gray-700 dark:text-white">Image URL</label>
                     <input
                         type="text"
                         name="imageUrl"
                         value={serviceData.imageUrl}
                         onChange={handleChange}
-                        className="w-full p-2 border border-gray-300 rounded"
+                        className="w-full p-2 border border-gray-300 rounded text-black"
                         required
                     />
                 </div>
                 <div>
-                    <label className="block font-medium text-gray-700">Service Name</label>
+                    <label className="block font-medium text-gray-700 dark:text-white">Service Name</label>
                     <input
                         type="text"
                         name="serviceName"
                         value={serviceData.serviceName}
                         onChange={handleChange}
-                        className="w-full p-2 border border-gray-300 rounded"
+                        className="w-full p-2 border border-gray-300 rounded text-black"
                         required
                     />
                 </div>
                 <div>
-                    <label className="block font-medium text-gray-700">Price</label>
+                    <label className="block font-medium text-gray-700 dark:text-white">Price</label>
                     <input
                         type="number"
                         name="price"
                         value={serviceData.price}
                         onChange={handleChange}
-                        className="w-full p-2 border border-gray-300 rounded"
+                        className="w-full p-2 border border-gray-300 rounded text-black"
                         required
                     />
                 </div>
                 <div>
-                    <label className="block font-medium text-gray-700">Service Area</label>
+                    <label className="block font-medium text-gray-700 dark:text-white">Service Area</label>
                     <input
                         type="text"
                         name="serviceArea"
                         value={serviceData.serviceArea}
                         onChange={handleChange}
-                        className="w-full p-2 border border-gray-300 rounded"
+                        className="w-full p-2 border border-gray-300 rounded text-black"
                         required
                     />
                 </div>
                 <div>
-                    <label className="block font-medium text-gray-700">Description</label>
+                    <label className="block font-medium text-gray-700 dark:text-white">Description</label>
                     <textarea
                         name="description"
                         value={serviceData.description}
                         onChange={handleChange}
-                        className="w-full p-2 border border-gray-300 rounded"
+                        className="w-full p-2 border border-gray-300 rounded text-black"
                         rows="4"
                         required
                     ></textarea>

@@ -66,14 +66,15 @@ function Registrar() {
     };
 
     return (
-        <div className="flex  justify-center items-center min-h-screen bg-gradient-to-r from-purple-600 to-gray-500">
+        <div className="flex  justify-center items-center min-h-screen bg-gradient-to-r from-purple-600 to-gray-500 dark:bg-gradient-to-r dark:from-gray-800 dark:to-medium">
             <Helmet>
                 <title>LEWIO | Registrar</title>
             </Helmet>
             <div className='hidden md:flex rounded-lg p-6'>
                 <Lottie animationData={registrationLotti}></Lottie>
             </div>
-            <div className="card border-2 mt-24 text-white w-full max-w-sm shadow-2xl mx-6 md:mx-0">
+            <div className="card border-2 mt-24 text-white w-full max-w-sm shadow-2xl 
+             mx-6 md:mx-0">
                 <form onSubmit={handleSignUp} className="card-body">
                     <h2 className="text-xl md:text-2xl text-center font-bold">Create Account</h2>
                     <div className="form-control">
@@ -136,7 +137,7 @@ function Registrar() {
                     </div>
                     {error && <p className="text-red-500 text-sm">{error}</p>}
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Sign Up</button>
+                        <button className="btn btn-primary dark:text-white">Sign Up</button>
                     </div>
                 </form>
             </div>

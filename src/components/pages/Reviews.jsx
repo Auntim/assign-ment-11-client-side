@@ -54,8 +54,8 @@ const Reviews = () => {
     return (
         <section className=" py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-2xl md:text-4xl font-bold text-center text-orange-700 mb-4">What Our Customers Are Saying</h2>
-                <p className='text-center text-[16px] text-gray-700 mb-6'>Holisticly facilitate bricks-and-clicks alignments vis-a-vis mission-critical innovation. Progressively morph transparent materials <br /> via robust technologies. Enthusiastically promote 24/7 catalysts for change before functionalized.</p>
+                <h2 className="text-2xl md:text-4xl font-bold text-center text-orange-700 mb-4 dark:text-white">What Our Customers Are Saying</h2>
+                <p className='text-center text-[16px] text-gray-700 mb-6 dark:text-white'>Holisticly facilitate bricks-and-clicks alignments vis-a-vis mission-critical innovation. Progressively morph transparent materials <br /> via robust technologies. Enthusiastically promote 24/7 catalysts for change before functionalized.</p>
 
                 {/* Swiper Slider */}
                 <Swiper
@@ -64,14 +64,14 @@ const Reviews = () => {
                     slidesPerView={1}
                     breakpoints={{
                         640: { slidesPerView: 2 },
-                        1024: { slidesPerView: 4 },
+                        1024: { slidesPerView: 3 },
                     }}
                     navigation // Add navigation arrows
                     loop // Infinite loop
                 >
                     {reviews.map((review) => (
                         <SwiperSlide key={review.id}>
-                            <div className="flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-md h-full">
+                            <div className="flex flex-col items-center text-center dark:bg-medium dark:border-2 dark:text-white bg-white p-6 rounded-lg shadow-md h-full">
                                 {/* Image */}
                                 <img
                                     src={review.image}
@@ -87,7 +87,7 @@ const Reviews = () => {
                                     ))}
                                 </div>
                                 {/* Text */}
-                                <p className="text-gray-600">{review.text}</p>
+                                <p className="text-gray-600 dark:text-white">{review.text}</p>
                             </div>
                         </SwiperSlide>
                     ))}

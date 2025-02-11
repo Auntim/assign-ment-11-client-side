@@ -50,8 +50,8 @@ const ManageBookedServices = () => {
     }
 
     return (
-        <div className="w-11/12 mx-auto">
-            <h1 className="text-2xl font-bold mb-6">Manage Booked Services</h1>
+        <div className="px-12 dark:bg-medium mx-auto">
+            <h1 className="text-2xl font-bold mb-6 dark:text-white mt-12">Manage Booked Services</h1>
             {bookings.length === 0 ? (
                 <p>No services found for you as the provider.</p>
             ) : (

@@ -29,8 +29,8 @@ function BookedService() {
             <Helmet>
                 <title>LEWIO | Booked-Services</title>
             </Helmet>
-            <div className="container mx-auto my-10">
-                <h1 className="text-3xl font-semibold text-center mb-6">
+            <div className="px-12 dark:bg-medium mx-auto pt-12">
+                <h1 className="text-3xl font-semibold text-center pt-6 my-6 dark:text-white">
                     My Booked Services
                 </h1>
 
@@ -45,23 +45,23 @@ function BookedService() {
                         {bookedServices.map((service) => (
                             <div
                                 key={service._id}
-                                className="p-4 bg-white shadow-md rounded-lg border border-gray-200"
+                                className="p-4 bg-white shadow-md rounded-lg mb-6 border dark:bg-medium dark:text-white border-gray-200"
                             >
                                 <img
                                     src={service.serviceImage}
                                     alt={service.serviceName}
                                     className="w-full h-48 object-cover rounded-md"
                                 />
-                                <h2 className="mt-4 text-lg font-semibold">
+                                <h2 className="mt-4 text-lg font-semibold dark:text-white">
                                     {service.serviceName}
                                 </h2>
-                                <p className="text-gray-600 mt-2">
+                                <p className="text-gray-600 mt-2 dark:text-white">
                                     <strong>Price:</strong> ${service.price}
                                 </p>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 dark:text-white">
                                     <strong>Date:</strong> {service.serviceDate || "N/A"}
                                 </p>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 dark:text-white">
                                     <strong>Special Instructions:</strong>{" "}
                                     {service.specialInstructions || "None"}
                                 </p>

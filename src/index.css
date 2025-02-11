@@ -3,16 +3,8 @@
 @tailwind utilities;
 
 
-body.light {
-    background-color: #ffffff;
-    color: #000000;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body.dark {
-    background-color: #1a202c; 
-    color: #ffffff;
-}
-
-nav.dark {
-    background-color: #2d3748; 
+body {
+    font-family: "Roboto", serif;
 }
