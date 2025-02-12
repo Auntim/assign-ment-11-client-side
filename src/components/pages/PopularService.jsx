@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import LoadingSpinner from "./LoadingSpinner";
 
 const PopularService = () => {
     const [services, setServices] = useState([]);
@@ -22,7 +23,7 @@ const PopularService = () => {
     }, []);
 
     if (loading) {
-        return <p className="text-center text-gray-500">Loading services...</p>;
+        return <p className="text-center text-gray-500"><LoadingSpinner /></p>;
     }
 
     return (

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProviders";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ServiceToDo = () => {
     const { user } = useContext(AuthContext);
@@ -39,15 +40,15 @@ const ServiceToDo = () => {
     };
 
     if (loading) {
-        return <p>Loading services...</p>;
+        return <p><LoadingSpinner /></p>;
     }
 
     return (
-        <div className="container mx-auto p-6">
+        <div className="px-6 md:px-12 mx-auto p-6 dark:bg-medium pt-12">
             <Helmet>
                 <title>LEWIO | Service To Do</title>
             </Helmet>
-            <h1 className="text-2xl font-bold text-center mb-6">Service To Do</h1>
+            <h1 className="text-2xl font-bold text-center mb-6 pt-12 dark:text-white">Service To Do</h1>
             {bookings.length === 0 ? (
                 <p className="text-center text-gray-500">No services found.</p>
             ) : (
@@ -62,20 +63,20 @@ const ServiceToDo = () => {
                                 alt={booking.serviceName}
                                 className="w-full h-40 object-cover rounded"
                             />
-                            <h2 className="text-lg font-semibold mt-4">{booking.serviceName}</h2>
-                            <p className="text-gray-500">Area: {booking.serviceArea}</p>
-                            <p className="text-gray-500">Price: ${booking.price}</p>
-                            <p className="text-gray-500">Status: {booking.serviceStatus}</p>
+                            <h2 className="text-lg font-semibold mt-4 dark:text-white">{booking.serviceName}</h2>
+                            <p className="text-gray-500 dark:text-white">Area: {booking.serviceArea}</p>
+                            <p className="text-gray-500 dark:text-white">Price: ${booking.price}</p>
+                            <p className="text-gray-500 dark:text-white">Status: {booking.serviceStatus}</p>
                             <div className="mt-4">
                                 <label
                                     htmlFor={`status-${booking._id}`}
-                                    className="block text-sm font-medium text-gray-700"
+                                    className="block text-sm font-medium text-gray-700 dark:text-white"
                                 >
                                     Update Status:
                                 </label>
                                 <select
                                     id={`status-${booking._id}`}
-                                    className="mt-1 block w-full border-gray-300 rounded shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="mt-1 block w-full border-gray-300 dark:border-white dark:text-white dark:bg-medium rounded shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                     value={booking.serviceStatus}
                                     onChange={(e) => handleStatusChange(booking._id, e.target.value)}
                                 >

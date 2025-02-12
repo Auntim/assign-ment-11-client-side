@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { AuthContext } from "../../provider/AuthProviders";
 import { FaPenToSquare } from "react-icons/fa6";
 import { FaTrashCan } from "react-icons/fa6";
+import LoadingSpinner from "./LoadingSpinner";
 
 
 
@@ -75,7 +76,7 @@ function ManageService() {
             </h1>
 
             {loading ? (
-                <p className="text-center text-gray-500">Loading your services...</p>
+                <p className="text-center text-gray-500"><LoadingSpinner /></p>
             ) : services.length === 0 ? (
                 <p className="text-center text-gray-500">
                     You have not added any services yet.

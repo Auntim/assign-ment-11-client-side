@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../provider/AuthProviders';
 import { Link } from 'react-router-dom';
+import LoadingSpinner from './LoadingSpinner';
 
 
 function BookedService() {
@@ -35,7 +36,7 @@ function BookedService() {
                 </h1>
 
                 {loading ? (
-                    <p className="text-center text-gray-500">Loading your bookings...</p>
+                    <p className="text-cecter"> <LoadingSpinner /></p>
                 ) : bookedServices.length === 0 ? (
                     <p className="text-center text-gray-500">
                         You have not booked any services yet.
@@ -80,7 +81,7 @@ function BookedService() {
                                     </div>
                                 </div>
                                 <Link to='/dashboard/manage-service'>
-                                    <button className='btn bg-orange-400 text-[14px] p-2 mt-4'>Manage Book</button>
+                                    <button className='btn btn-outline text-black text-[14px] p-2 mt-4 dark:text-white dark:btn dark:btn-outline'>Manage Book</button>
                                 </Link>
                             </div>
 

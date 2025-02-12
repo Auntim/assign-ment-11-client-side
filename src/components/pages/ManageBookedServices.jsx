@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 // import { AuthContext } from "../provider/AuthProviders"; // Adjust the path based on your project structure
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ManageBookedServices = () => {
     const { user } = useContext(AuthContext); // Access the logged-in user
@@ -46,7 +47,7 @@ const ManageBookedServices = () => {
     };
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <LoadingSpinner />;
     }
 
     return (

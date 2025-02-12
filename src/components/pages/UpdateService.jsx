@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import LoadingSpinner from "./LoadingSpinner";
 
 function UpdateService() {
     const { id } = useParams();
@@ -73,9 +74,8 @@ function UpdateService() {
     };
 
     if (loading) {
-        return <p className="text-center mt-10">Loading service details...</p>;
+        return <p className="text-center text-gray-500"><LoadingSpinner /></p>;
     }
-
     return (
         <div className="container mx-auto my-10">
             <h1 className="text-3xl font-semibold text-center mb-6">Update Service</h1>

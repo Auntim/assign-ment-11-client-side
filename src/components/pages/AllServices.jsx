@@ -1,21 +1,29 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { Helmet } from 'react-helmet-async';
+import LoadingSpinner from "./LoadingSpinner";
+// import { AuthContext } from "../../provider/AuthProviders";
 
 
 const AllServices = () => {
+    // const { loading } = useContext(AuthContext)
     const [services, setServices] = useState([]);
     const [searchText, setSearchText] = useState("");
     const [filteredServices, setFilteredServices] = useState([]);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         fetch("https://web-app-server-site.vercel.app/services")
             .then((res) => res.json())
             .then((data) => {
                 setServices(data);
+                setLoading(false);
                 setFilteredServices(data);
+
             });
     }, []);
+
 
     useEffect(() => {
         const lowerCaseSearchText = searchText.toLowerCase();
@@ -24,6 +32,11 @@ const AllServices = () => {
         );
         setFilteredServices(filtered);
     }, [searchText, services]);
+
+    if (loading) {
+        return <LoadingSpinner />;
+    }
+
 
     return (
         <div className="px-12 py-12  mx-auto dark:bg-medium">
