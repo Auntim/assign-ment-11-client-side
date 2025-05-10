@@ -133,12 +133,10 @@ const Navbar = () => {
                             <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white mr-2">
                                 Login
                             </Link>
-                            <Link to="/register" className="hover:text-yellow-500 text-white font-semibold btn btn-outline mr-2">
-                                Register
-                            </Link>
+
                         </>
                     ) : (
-                        <div className="relative flex gap-2 items-center">
+                        <div className="relative flex gap-2  items-center">
                             {/* Profile Image or Fallback Icon */}
                             {user?.photoURL ? (
                                 <img
@@ -172,7 +170,7 @@ const Navbar = () => {
                         </div>
 
                     )}
-                    <div className="mx-2 md:mx-3 border border-pink-400 rounded-2xl">
+                    <div className="mx-2 md:mx-3 border border-pink-400 rounded-2xl hidden md:block">
                         <ThemeToggle />
                     </div>
 
@@ -185,7 +183,7 @@ const Navbar = () => {
                             />
                         ) : (
                             <CgMenuRightAlt
-                                className="text-3xl cursor-pointer"
+                                className="text-3xl cursor-pointer ml-6"
                                 onClick={() => setIsMenuOpen(true)}
                             />
                         )}
@@ -195,42 +193,90 @@ const Navbar = () => {
 
 
             {isMenuOpen && (
-                <ul className="md:hidden  bg-violet-500 dark:bg-medium dark:text-white space-y-4 p-4">
-                    <li>
-                        <Link
-                            to="/dashboard/add-service"
-                            className="block px-3 py-2 hover:bg-gray-700 rounded"
-                        >
-                            Add Service
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/dashboard/manage-service"
-                            className="block px-3 py-2 hover:bg-gray-700 rounded"
-                        >
-                            Manage Service
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/dashboard/booked-services"
-                            className="block px-3 py-2 hover:bg-gray-700 rounded"
-                        >
-                            Booked Services
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/dashboard/service-to-do"
-                            className="block px-3 py-2 hover:bg-gray-700 rounded"
-                        >
-                            Service To-Do
-                        </Link>
-                    </li>
+                <ul className="absolute top-20 right-4 w-40 backdrop-blur-md bg-black/70 text-white rounded-xl shadow-2xl p-1 space-y-3 z-50 border border-gray-700">
+                    {user ? (
+                        <>
+                            <li>
+                                <Link
+                                    to="/dashboard/add-service"
+                                    className="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition"
+                                >
+                                    Add Service
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/dashboard/manage-service"
+                                    className="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition"
+                                >
+                                    Manage Service
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/dashboard/booked-services"
+                                    className="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition"
+                                >
+                                    Booked Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/dashboard/service-to-do"
+                                    className="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition"
+                                >
+                                    Service To-Do
+                                </Link>
+                            </li>
+                            <li>
+                                {/* Theme Toggle with custom wrapper */}
+                                <div className="flex  items-center gap-2">
+                                    <p className="text-md ml-3">Theme:</p>
+                                    <ThemeToggle />
+                                </div>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li>
+                                <NavLink
+                                    to="/"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "text-yellow-500 text-[22px]"
+                                            : "hover:text-yellow-500 text-[22px]"
+                                    }
+                                >
+                                    Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to="/services"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "text-yellow-500 text-[22px]"
+                                            : "hover:text-yellow-500 text-[22px]"
+                                    }
+                                >
+                                    Services
+                                </NavLink>
+                            </li>
+                            <li>
 
+                                <div className="flex  items-center gap-2">
+                                    <p className="text-xl ml-1">Theme:</p>
+                                    <ThemeToggle />
+                                </div>
+                            </li>
+                        </>
+                    )}
                 </ul>
             )}
+
+
+
+
         </nav>
     );
 };

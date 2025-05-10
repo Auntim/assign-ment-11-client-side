@@ -76,7 +76,7 @@ function Registrar() {
             <div className="card border-2 mt-24 text-white w-full max-w-sm shadow-2xl 
              mx-6 md:mx-0">
                 <form onSubmit={handleSignUp} className="card-body">
-                    <h2 className="text-xl md:text-2xl text-center font-bold">Create Account</h2>
+                    <h2 className="text-xl md:text-2xl text-center font-bold text-black">Create Account</h2>
                     <div className="form-control">
                         <label className="label">
                             <span className="text-xl font-semibold">Name</span>
@@ -125,7 +125,7 @@ function Registrar() {
                             required
                         />
                         <label className="flex justify-center items-center">
-                            <p className="text-center my-3 label-text-alt text-white text-[18px]">
+                            <p className="text-center my-3 label-text-alt text-black text-[18px]">
                                 Already have an Account?{' '}
                                 <span>
                                     <Link to="/login" className="text-blue-500 hover:underline">
