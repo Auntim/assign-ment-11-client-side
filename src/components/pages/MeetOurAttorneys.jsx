@@ -20,12 +20,12 @@ const MeetOurAttorneys = () => {
                         Our experienced attorneys are here to provide expert legal advice and representation.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-8 md:mx-0 dark:bg-medium">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-8 md:mx-0 ">
                     {attorneys.length > 0 ? (
                         attorneys.map((attorney) => (
                             <div
                                 key={attorney._id}
-                                className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-2xl hover:border-2 transition duration-300 dark:bg-medium dark:border-2"
+                                className=" shadow-md rounded-lg p-6 text-center hover:shadow-2xl hover:border-2 transition duration-300 dark:bg-black dark:border-2"
                             >
                                 <img
                                     src={attorney.imageUrl}

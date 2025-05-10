@@ -36,7 +36,7 @@ function ServiceCard({ service }) {
                 <Link
                     to={`/services/${service._id}`}
 
-                    className="mt-4 btn btn-outline text-black px-4 py-2 rounded dark:text-white"
+                    className="mt-4 btn btn-outline text-black px-4 py-2 rounded dark:text-white dark:bg-white "
                 >
                     View Details
                 </Link>

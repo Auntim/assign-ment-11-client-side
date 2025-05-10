@@ -84,14 +84,14 @@ const Navbar = () => {
                             </button>
 
                             {isOpen && (
-                                <ul className="absolute bg-gray-900 text-white mt-3 rounded-xl shadow-2xl p-2 grid grid-cols-1 gap-1 w-40 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+                                <ul className="absolute  backdrop-blur-md bg-black/70 text-white mt-3 rounded-xl shadow-2xl p-2 grid grid-cols-1 gap-1 w-40 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
                                     <li>
                                         <Link
                                             to="/dashboard/add-service"
                                             className="block px-3 py-2 hover:bg-gray-800 hover:text-yellow-400 rounded transition"
                                             onClick={() => setIsOpen(false)}
                                         >
-                                            ➕ Add Service
+                                            Add Service
                                         </Link>
                                     </li>
                                     <li>
@@ -154,7 +154,7 @@ const Navbar = () => {
 
                             {/* Dropdown Content */}
                             {isOpens && (
-                                <div className="absolute bg-black text-white rounded-2xl shadow-lg p-4 top-12 right-0 z-50">
+                                <div className="absolute bg-black/70 backdrop-blur-md border border-gray-800 text-white rounded-2xl shadow-lg p-4 top-12 right-0 z-50">
                                     <p className="font-semibold">{user?.displayName || 'User'}</p>
                                     <button
                                         onClick={() => {

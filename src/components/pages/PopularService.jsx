@@ -45,7 +45,7 @@ const PopularService = () => {
                                 alt={service.serviceName}
                                 className="w-full h-48 object-cover"
                             />
-                            <div className="p-4">
+                            <div className="p-4 dark:bg-medium">
                                 <h3 className="text-xl font-semibold text-gray-700 dark:text-white">
                                     {service.serviceName}
                                 </h3>
@@ -69,7 +69,7 @@ const PopularService = () => {
                                 </p>
                                 <Link
                                     to={`/services/${service._id}`}
-                                    className="mt-4  dark:text-white px-4 py-2 rounded btn btn-outline text-black"
+                                    className="mt-4  dark:text-white px-4 py-2 rounded btn btn-outline  dark:bg-black"
                                 >
                                     View Details
                                 </Link>
