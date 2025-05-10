@@ -1,13 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-// import { useAuth } from "../hooks/useAuth";
 import { FaUserCircle } from "react-icons/fa";
 import { CgMenuRightAlt } from "react-icons/cg";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProviders";
 import { AiOutlineClose } from "react-icons/ai";
 import { GoLaw } from 'react-icons/go';
-// import { FaSun, FaMoon } from 'react-icons/fa';
 import ThemeToggle from "../ThemeToggle";
 import { FiChevronDown } from 'react-icons/fi';
 
@@ -174,7 +172,7 @@ const Navbar = () => {
                         </div>
 
                     )}
-                    <div className="mx-2 md:mx-3">
+                    <div className="mx-2 md:mx-3 border border-pink-400 rounded-2xl">
                         <ThemeToggle />
                     </div>
 
