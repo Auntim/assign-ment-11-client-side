@@ -84,7 +84,7 @@ const Navbar = () => {
                             </button>
 
                             {isOpen && (
-                                <ul className="absolute  backdrop-blur-md bg-black/70 text-white mt-3 rounded-xl shadow-2xl p-2 grid grid-cols-1 gap-1 w-40 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+                                <ul className="absolute  backdrop-blur-md bg-black/70 text-white mt-3 rounded-xl shadow-2xl p-2 grid grid-cols-1 gap-1 w-40 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 border border-gray-800">
                                     <li>
                                         <Link
                                             to="/dashboard/add-service"

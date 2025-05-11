@@ -24,10 +24,11 @@ function ServicesDetails() {
             <Helmet>
                 <title>LEWIO | Details</title>
             </Helmet>
-            <div className="w-10/12 mx-auto my-24">
-                <div className="text-center my-6">
+            <div className="w-10/12 mx-auto pt-24 ">
+                <div className="text-center mb-3">
                     <h1 className="text-3xl font-bold dark:text-white">{serviceName}</h1>
                     <p className="text-lg text-gray-500 dark:text-white">{serviceArea}</p>
+                    <div className='mt-1 h-1 w-32 bg-green-700 rounded-md text-center mx-auto'></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Service Image */}
