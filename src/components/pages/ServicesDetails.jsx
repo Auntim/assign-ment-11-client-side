@@ -20,14 +20,14 @@ function ServicesDetails() {
         provider: { name: providerName, image: providerImage, email: providerEmail },
     } = service;
     return (
-        <div>
+        <div className='dark:bg-black'>
             <Helmet>
                 <title>LEWIO | Details</title>
             </Helmet>
-            <div className="w-10/12 mx-auto my-10">
+            <div className="w-10/12 mx-auto my-24">
                 <div className="text-center my-6">
-                    <h1 className="text-3xl font-bold">{serviceName}</h1>
-                    <p className="text-lg text-gray-500">{serviceArea}</p>
+                    <h1 className="text-3xl font-bold dark:text-white">{serviceName}</h1>
+                    <p className="text-lg text-gray-500 dark:text-white">{serviceArea}</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Service Image */}
@@ -35,9 +35,9 @@ function ServicesDetails() {
 
                     {/* Service Details */}
                     <div>
-                        <h2 className="text-2xl font-semibold mb-4">Service Details</h2>
-                        <p className="text-gray-700 mb-4">{description}</p>
-                        <h3 className="text-xl font-bold mb-2">Price: ${price}</h3>
+                        <h2 className="text-2xl font-semibold mb-3 dark:text-white">Service Details</h2>
+                        <p className="text-gray-700 mb-4 dark:text-white">{description}</p>
+                        <h3 className="text-xl font-bold mb-2 dark:text-white">Price: ${price}</h3>
 
                         {/* Service Provider Details */}
                         <div className="flex items-center gap-4 mt-6">
@@ -47,8 +47,8 @@ function ServicesDetails() {
                                 className="w-16 h-16 rounded-full border-2 border-gray-300"
                             />
                             <div>
-                                <h4 className="text-lg font-bold">{providerName}</h4>
-                                <p className="text-gray-500 text-sm">{providerEmail}</p>
+                                <h4 className="text-lg font-bold dark:text-white">{providerName}</h4>
+                                <p className="text-gray-500 text-sm dark:text-white">{providerEmail}</p>
                             </div>
                         </div>
 

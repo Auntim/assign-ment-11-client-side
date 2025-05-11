@@ -46,7 +46,7 @@ function BookedService() {
                         {bookedServices.map((service) => (
                             <div
                                 key={service._id}
-                                className="p-4 bg-white shadow-md rounded-lg mb-6 border dark:bg-medium dark:text-white border-gray-200"
+                                className="p-4  shadow-md rounded-lg mb-6 border dark:bg-medium dark:text-white border-gray-200"
                             >
                                 <img
                                     src={service.serviceImage}
@@ -81,7 +81,7 @@ function BookedService() {
                                     </div>
                                 </div>
                                 <Link to='/dashboard/manage-service'>
-                                    <button className='btn btn-outline text-black text-[14px] p-2 mt-4 dark:text-white dark:btn dark:btn-outline'>Manage Book</button>
+                                    <button className='btn btn-outline text-black text-[14px] p-2 mt-4 dark:bg-white dark:btn dark:btn-outline'>Manage Book</button>
                                 </Link>
                             </div>
 

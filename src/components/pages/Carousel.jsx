@@ -17,15 +17,12 @@ import Slide from '../Slide'
 
 export default function Carousel() {
     return (
-        <div className='py-6'>
+        <div className=''>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
                 loop={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
+
                 pagination={{
                     clickable: true,
                 }}

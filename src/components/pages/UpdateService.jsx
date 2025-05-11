@@ -77,14 +77,14 @@ function UpdateService() {
         return <p className="text-center text-gray-500"><LoadingSpinner /></p>;
     }
     return (
-        <div className="container mx-auto my-10">
-            <h1 className="text-3xl font-semibold text-center mb-6">Update Service</h1>
+        <div className=" mt-24 dark:bg-black">
+            <h1 className="text-3xl font-semibold text-center mb-6 dark:text-white">Update Service</h1>
             <form
                 onSubmit={handleUpdate}
-                className="max-w-xl mx-auto bg-white p-6 shadow-md rounded"
+                className="max-w-xl mx-auto  p-6 shadow-md rounded dark:bg-black"
             >
                 <div className="mb-4">
-                    <label htmlFor="serviceName" className="block text-gray-700 font-medium">
+                    <label htmlFor="serviceName" className="block text-gray-700 font-medium dark:text-white">
                         Service Name
                     </label>
                     <input
@@ -99,7 +99,7 @@ function UpdateService() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="price" className="block text-gray-700 font-medium">
+                    <label htmlFor="price" className="block text-gray-700 font-medium dark:text-white">
                         Price
                     </label>
                     <input
@@ -114,7 +114,7 @@ function UpdateService() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="serviceArea" className="block text-gray-700 font-medium">
+                    <label htmlFor="serviceArea" className="block text-gray-700 font-medium dark:text-white">
                         Service Area
                     </label>
                     <input
@@ -129,7 +129,7 @@ function UpdateService() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="description" className="block text-gray-700 font-medium">
+                    <label htmlFor="description" className="block text-gray-700 font-medium dark:text-white">
                         Description
                     </label>
                     <textarea
@@ -144,7 +144,7 @@ function UpdateService() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="imageUrl" className="block text-gray-700 font-medium">
+                    <label htmlFor="imageUrl" className="block text-gray-700 font-medium dark:text-white">
                         Image URL
                     </label>
                     <input

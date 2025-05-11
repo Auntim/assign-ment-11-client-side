@@ -86,7 +86,7 @@ function ManageService() {
                     {services.map((service) => (
                         <div
                             key={service._id}
-                            className="p-4 bg-white shadow-md rounded-lg border border-gray-200 dark:bg-medium"
+                            className="p-4  shadow-md rounded-lg border border-gray-200 dark:bg-medium"
                         >
                             <img
                                 src={service.imageUrl}

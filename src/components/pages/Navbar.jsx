@@ -45,10 +45,10 @@ const Navbar = () => {
 
 
     return (
-        <nav className=" bg-gradient-to-r fixed top-0  w-full z-50 shadow-lg from-cyan-500 to-blue-600 text-white  dark:text-white dark:border-b-2 dark:bg-gradient-to-r dark:from-gray-900 dark:to-black">
-            <div className="w-full  md:container mx-auto flex justify-between items-center py-4 px-6 ">
+        <nav className=" bg-black/70 backdrop-blur-xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] rounded-full z-50 shadow-lg text-white  dark:text-white dark:border-b-2 dark:bg-gradient-to-r dark:from-gray-300 dark:to-gray-700">
+            <div className="w-full md:container mx-auto flex justify-between items-center py-2 md:py-3 px-6 ">
                 <Link to="/" className="text-xl md:text-2xl font-bold text-slate-700 flex items-center">
-                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> <span className="hidden md:flex dark:text-white">Attorney</span>
+                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> <span className="hidden md:flex dark:text-white text-white">Attorney</span>
                 </Link>
 
                 <ul className="hidden md:flex space-x-6">
@@ -154,7 +154,7 @@ const Navbar = () => {
 
                             {/* Dropdown Content */}
                             {isOpens && (
-                                <div className="absolute bg-black/70 backdrop-blur-md border border-gray-800 text-white rounded-2xl shadow-lg p-4 top-12 right-0 z-50">
+                                <div className="absolute bg-black/70 backdrop-blur-md border border-gray-900 text-white rounded-2xl shadow-lg p-4 top-12 right-0 z-50">
                                     <p className="font-semibold">{user?.displayName || 'User'}</p>
                                     <button
                                         onClick={() => {
