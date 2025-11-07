@@ -24,6 +24,7 @@ import UpdateService from './components/pages/UpdateService';
 import Erropage from './components/pages/Erropage';
 import ManageBookedServices from './components/pages/ManageBookedServices';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -82,6 +83,8 @@ const router = createBrowserRouter([
     ]
   },
 ]);
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

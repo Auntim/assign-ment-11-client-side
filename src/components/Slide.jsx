@@ -22,7 +22,7 @@ const Slide = ({ image, text }) => {
                     >
                         <motion.button
 
-                            className='w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md lg:w-auto hover:bg-gray-500 focus:outline-none focus:bg-gray-500'
+                            className='w-1/2 md:w-4/12 px-5 py-3 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-500'
                         >Explore more
                         </motion.button>
                     </Link>

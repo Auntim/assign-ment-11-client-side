@@ -46,9 +46,9 @@ const Navbar = () => {
 
     return (
         <nav className=" bg-black/70 backdrop-blur-xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] rounded-full z-50 shadow-lg text-white  dark:text-white dark:border-b-2 dark:bg-gradient-to-r dark:from-gray-300 dark:to-gray-700">
-            <div className="w-full md:container mx-auto flex justify-between items-center py-2 md:py-3 px-6 ">
+            <div className="w-full md:container mx-auto flex justify-between items-center py-2 md:py-2 px-6">
                 <Link to="/" className="text-xl md:text-2xl font-bold text-slate-700 flex items-center">
-                    <span className="text-pink-600 mx-1 "><GoLaw className="h-10 w-10" /></span> <span className="hidden md:flex dark:text-white text-white">Attorney</span>
+                    <span className="text-pink-600 mx-1 "><GoLaw className="h-8 w-8" /></span> <span className="hidden md:flex dark:text-white text-white"></span>
                 </Link>
 
                 <ul className="hidden md:flex space-x-6">
@@ -56,7 +56,7 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
-                                isActive ? "text-yellow-500 text-[22px]" : "hover:text-yellow-500 text-[22px]"
+                                isActive ? "text-yellow-500 text-[18px]" : "hover:text-yellow-500 text-[18px]"
                             }
                         >
                             Home
@@ -66,7 +66,7 @@ const Navbar = () => {
                         <NavLink
                             to="/services"
                             className={({ isActive }) =>
-                                isActive ? "text-yellow-500 text-[22px]" : "hover:text-yellow-500 text-[22px]"
+                                isActive ? "text-yellow-500 text-[18px]" : "hover:text-yellow-500 text-[18px]"
                             }
                         >
                             Services
@@ -78,9 +78,9 @@ const Navbar = () => {
                         <li className="relative">
                             <button
                                 onClick={toggleDropdown}
-                                className="flex items-center gap-1 text-[22px] hover:text-yellow-500 transition duration-300"
+                                className="flex items-center gap-1 text-[18px] hover:text-yellow-500 transition duration-300"
                             >
-                                Dashboard <FiChevronDown className="text-[18px] mt-1" />
+                                Dashboard <FiChevronDown className="text-[14px] text-gray-300 mt-1" />
                             </button>
 
                             {isOpen && (
@@ -282,3 +282,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

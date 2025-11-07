@@ -34,7 +34,7 @@ Lewio is an innovative service-sharing platform designed exclusively for lawyers
 
 Technologies Used:👉
 
-Frontend: React, Tailwind CSS, DaisyUI, React Router DOM
+Frontend: React, Tailwind CSS, DaisyUI, React Router DOM, Bootstrap 
 Backend: Node.js, Express.js
 Database: MongoDB
 Authentication: Firebase & JWT
