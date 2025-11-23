@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { Helmet } from 'react-helmet-async';
 import LoadingSpinner from "./LoadingSpinner";
+import { BiSearch } from "react-icons/bi";
 // import { AuthContext } from "../../provider/AuthProviders";
 
 
@@ -45,7 +46,7 @@ const AllServices = () => {
             </Helmet>
             <h1 className="text-3xl font-bold my-6 text-center mt-12 dark:text-white">All Services</h1>
 
-            <div className="mb-6 text-center">
+            <div className=" mb-6 text-center">
                 <input
                     type="text"
                     placeholder="Search for a service..."
@@ -53,6 +54,7 @@ const AllServices = () => {
                     onChange={(e) => setSearchText(e.target.value)}
                     className="p-2 border w-full md:w-1/2 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
+                <span className="absolute sm:right-16 md:right-96 md:pt-2 md:ml-3"><BiSearch className="hidden md:flex w-7 h-6 text-gray-700" /></span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 dark:bg-medium text-center rounded-lg ">
@@ -69,3 +71,5 @@ const AllServices = () => {
 };
 
 export default AllServices;
+
+

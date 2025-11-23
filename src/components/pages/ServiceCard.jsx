@@ -1,9 +1,7 @@
-import React from 'react'
 import { Link } from "react-router-dom";
 
-
 function ServiceCard({ service }) {
-    // const { imageUrl, serviceName, price, serviceArea, description, } = service
+
     return (
         <div className=' bg-purple-100 rounded-xl dark:bg-medium dark:border-2 '>
             <img

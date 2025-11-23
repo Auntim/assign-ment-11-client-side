@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
 import Root from './components/root/Root';
 import AuthProviders from './provider/AuthProviders';
 import Home from './components/Home';
@@ -85,11 +86,11 @@ const router = createBrowserRouter([
 ]);
 
 
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
       <AuthProviders>
+        <Toaster position="top-right" reverseOrder={false} />
         <RouterProvider router={router} />
       </AuthProviders>
     </HelmetProvider>

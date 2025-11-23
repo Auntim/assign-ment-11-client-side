@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
+import { Link } from 'react-router-dom'
 
 function HotServices() {
 
@@ -16,10 +17,12 @@ function HotServices() {
             <div className='text-center items-center my-6 '>
                 <h1 className='text-2xl md:text-4xl font-semibold text-orange-700 mb-4 dark:text-white'>All Hot Service of the Day!!</h1>
                 <p className='text-[15px] opacity-70 text-gray-800 dark:text-white'>Credibly generate empowered scenarios via sticky e-markets. Completely revolutionize go forward core competencies <br /> for sustainable e-services. Enthusiastically generate open-source.</p>
+
             </div>
+
             <div className='w-11/12 mx-auto my-12 grid grid-cols-1 md:grid-cols-3  gap-2 md:gap-4 lg:gap-4 rounded-md'>
                 {
-                    services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
+                    services.slice(0, 6).map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
             </div>
         </div>

@@ -78,10 +78,10 @@ const PopularService = () => {
                     ))}
                 </div>
 
-                <div className="mt-8 text-center">
+                <div className="mt-8 text-left">
                     <Link
                         to="/services"
-                        className="bg-gray-800 text-white text-xl px-6 py-3 rounded hover:bg-gray-700"
+                        className="bg-gray-800 text-white text-md px-2 py-2 rounded hover:bg-gray-700"
                     >
                         Show All
                     </Link>

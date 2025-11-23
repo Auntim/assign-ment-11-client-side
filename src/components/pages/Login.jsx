@@ -7,12 +7,13 @@ import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProviders';
 import loginLotti from '../../assets/lotti/login.json'
 import Lottie from 'lottie-react';
+import useToast from '../hooks/useToast';
 
 
 function Login() {
     const { googleSignIn, signInUser } = useContext(AuthContext);
     const navigate = useNavigate();
-
+    const { success, error } = useToast();
     const {
         register,
         handleSubmit,
@@ -24,19 +25,11 @@ function Login() {
         try {
             const result = await signInUser(email, password);
             console.log('Email Login Successful:', result.user);
-            Swal.fire({
-                icon: 'success',
-                title: 'Login Successful',
-                text: `Welcome back, ${result.user.email}!`,
-            });
+            success('Login Successful')
             navigate('/');
         } catch (error) {
             console.error('Email Login Error:', error.message);
-            Swal.fire({
-                icon: 'error',
-                title: 'Login Failed',
-                text: 'Invalid email or password. Please try again.',
-            });
+            error('Login Failed. Please check your credentials... ');
         }
     };
 
@@ -44,19 +37,11 @@ function Login() {
         try {
             const result = await googleSignIn();
             console.log('Google Sign-In Successful:', result.user);
-            Swal.fire({
-                icon: 'success',
-                title: 'Login Successful',
-                text: `Welcome back, ${result.user.displayName}!`,
-            });
+            success('Login Successful')
             navigate('/');
-        } catch (error) {
-            console.error('Google Sign-In Error:', error.message);
-            Swal.fire({
-                icon: 'error',
-                title: 'Login Failed',
-                text: 'Google sign-in was unsuccessful. Please try again.',
-            });
+        } catch (err) {
+            console.error('Google Sign-In Error:', err.message);
+            error('Google Sign-In Failed. Please try again.');
         }
     };
 

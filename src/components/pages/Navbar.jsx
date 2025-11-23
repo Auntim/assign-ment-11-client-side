@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { CgMenuRightAlt } from "react-icons/cg";
@@ -8,6 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GoLaw } from 'react-icons/go';
 import ThemeToggle from "../ThemeToggle";
 import { FiChevronDown } from 'react-icons/fi';
+import useToast from "../hooks/useToast";
 
 
 
@@ -16,6 +17,9 @@ const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const dashboardRef = useRef(null);
+    const userRef = useRef(null);
+    const { success, error } = useToast();
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleDropdown = () => setIsOpen(!isOpen);
@@ -23,29 +27,41 @@ const Navbar = () => {
     const [isOpens, setIsOpens] = useState(false);
     const toggleDropdownUser = () => setIsOpens(prev => !prev);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                dashboardRef.current &&
+                !dashboardRef.current.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+
+            if (
+                userRef.current &&
+                !userRef.current.contains(event.target)
+            ) {
+                setIsOpens(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+
     const handleLogout = async () => {
         try {
             await logout();
-            Swal.fire({
-                icon: "success",
-                title: "Logged Out!",
-                text: "You have been successfully logged out.",
-                timer: 2000,
-                showConfirmButton: false,
-            });
+            success("Logout Successful");
             navigate("/login");
         } catch (error) {
-            Swal.fire({
-                icon: "error",
-                title: "Error",
-                text: error.message,
-            });
+            error("Logout Failed. Please try again.");
         }
     };
 
 
     return (
-        <nav className=" bg-black/70 backdrop-blur-xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] rounded-full z-50 shadow-lg text-white  dark:text-white dark:border-b-2 dark:bg-gradient-to-r dark:from-gray-300 dark:to-gray-700">
+        <nav className=" bg-black/70 backdrop-blur-xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] rounded-full z-50 shadow-lg text-white  dark:text-white dark:border-b-2 dark:bg-gradient-to-r dark:from-gray-700 dark:to-gray-500">
             <div className="w-full md:container mx-auto flex justify-between items-center py-2 md:py-2 px-6">
                 <Link to="/" className="text-xl md:text-2xl font-bold text-slate-700 flex items-center">
                     <span className="text-pink-600 mx-1 "><GoLaw className="h-8 w-8" /></span> <span className="hidden md:flex dark:text-white text-white"></span>
@@ -75,7 +91,7 @@ const Navbar = () => {
 
 
                     {user && (
-                        <li className="relative">
+                        <li className="relative" ref={dashboardRef}>
                             <button
                                 onClick={toggleDropdown}
                                 className="flex items-center gap-1 text-[18px] hover:text-yellow-500 transition duration-300"
@@ -130,13 +146,13 @@ const Navbar = () => {
                 <div className="flex justify-center items-center ">
                     {!user ? (
                         <>
-                            <Link to="/login" className="hover:text-yellow-500 font-semibold btn btn-outline text-white mr-2">
+                            <Link to="/login" className="hover:text-yellow-500 text-sm md:text-[16px] border px-3 py-1 rounded-2xl btn-outline text-white mr-1 scale-100 hover:scale-105 transition-transform duration-300">
                                 Login
                             </Link>
 
                         </>
                     ) : (
-                        <div className="relative flex gap-2  items-center">
+                        <div className="relative flex gap-2  items-center" ref={userRef}>
                             {/* Profile Image or Fallback Icon */}
                             {user?.photoURL ? (
                                 <img
@@ -170,7 +186,7 @@ const Navbar = () => {
                         </div>
 
                     )}
-                    <div className="mx-2 md:mx-3 border border-pink-400 rounded-2xl hidden md:block">
+                    <div className=" md:mx-3 rounded-2xl ">
                         <ThemeToggle />
                     </div>
 
@@ -183,7 +199,7 @@ const Navbar = () => {
                             />
                         ) : (
                             <CgMenuRightAlt
-                                className="text-3xl cursor-pointer ml-6"
+                                className="text-3xl cursor-pointer "
                                 onClick={() => setIsMenuOpen(true)}
                             />
                         )}
@@ -261,13 +277,6 @@ const Navbar = () => {
                                 >
                                     Services
                                 </NavLink>
-                            </li>
-                            <li>
-
-                                <div className="flex  items-center gap-2">
-                                    <p className="text-xl ml-1">Theme:</p>
-                                    <ThemeToggle />
-                                </div>
                             </li>
                         </>
                     )}

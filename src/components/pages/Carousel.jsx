@@ -22,7 +22,6 @@ export default function Carousel() {
                 spaceBetween={30}
                 centeredSlides={true}
                 loop={true}
-
                 pagination={{
                     clickable: true,
                 }}
@@ -34,6 +33,7 @@ export default function Carousel() {
                     <Slide
                         image={bgimg1}
                         text='Get Your Best Lawyer Done in minutes'
+
                     ></Slide>
                 </SwiperSlide>
                 <SwiperSlide>

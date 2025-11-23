@@ -5,10 +5,12 @@ import HotServices from './pages/HotServices'
 import PopularService from './pages/PopularService'
 import MeetOurAttorneys from './pages/MeetOurAttorneys'
 import Reviews from './pages/Reviews'
+import DotGrid from './DotGrid'
 
 function Home() {
     return (
-        <div className='bg-gray-200 dark:bg-medium dark:text-white'>
+        <div className='bg-gray-200 dark:bg-medium dark:text-white '>
+
             <Helmet>
                 <title>LEWIO | Home</title>
             </Helmet>
@@ -28,6 +30,7 @@ function Home() {
                 <Reviews />
             </section>
         </div>
+
     )
 }
 
