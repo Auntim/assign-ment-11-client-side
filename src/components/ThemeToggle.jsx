@@ -29,7 +29,7 @@ function ThemeToggle() {
                 w-12 h-12 flex items-center justify-center
                 
                 rounded-full cursor-pointer
-                transition-colors duration-300
+                transition-colors duration-300 
             "
         >
             {darkmode ? (

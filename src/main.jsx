@@ -24,6 +24,7 @@ import BookingService from './components/pages/BookingService';
 import UpdateService from './components/pages/UpdateService';
 import Erropage from './components/pages/Erropage';
 import ManageBookedServices from './components/pages/ManageBookedServices';
+import LawyerList from './components/pages/LawyerList';
 
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path: '/services/:id',
         element: <PrivateRoute><ServicesDetails></ServicesDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`https://web-app-server-site.vercel.app/services/${params.id}`)
+      },
+      {
+        path: '/category/:id',
+        element: <LawyerList></LawyerList>
       },
       {
         path: 'bookings',

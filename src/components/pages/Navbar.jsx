@@ -54,8 +54,8 @@ const Navbar = () => {
             await logout();
             success("Logout Successful");
             navigate("/login");
-        } catch (error) {
-            error("Logout Failed. Please try again.");
+        } catch (err) {
+            error("Logout Failed. Please try again.", err.message);
         }
     };
 
@@ -170,14 +170,14 @@ const Navbar = () => {
 
                             {/* Dropdown Content */}
                             {isOpens && (
-                                <div className="absolute bg-black/70 backdrop-blur-md border border-gray-900 text-white rounded-2xl shadow-lg p-4 top-12 right-0 z-50">
+                                <div className="absolute bg-black/70 backdrop-blur-md border border-gray-900 text-white rounded-2xl shadow-lg px-3 py-2 top-12 right-0 z-50" ref={userRef}>
                                     <p className="font-semibold">{user?.displayName || 'User'}</p>
                                     <button
                                         onClick={() => {
                                             handleLogout();
                                             setIsOpens(false);
                                         }}
-                                        className="hover:text-yellow-500 btn btn-outline text-white mt-2 text-xl"
+                                        className="hover:text-yellow-500 bg-orange-800 px-3 py-2 rounded-md text-white mt-2 text-md"
                                     >
                                         Logout
                                     </button>
@@ -209,7 +209,7 @@ const Navbar = () => {
 
 
             {isMenuOpen && (
-                <ul className="absolute top-20 right-4 w-40 backdrop-blur-md bg-black/70 text-white rounded-xl shadow-2xl p-1 space-y-3 z-50 border border-gray-700">
+                <ul className="absolute top-20 right-4 w-40 backdrop-blur-md bg-black/70 text-white rounded-xl shadow-2xl p-1 space-y-3 z-50 border border-gray-700" >
                     {user ? (
                         <>
                             <li>
@@ -246,10 +246,10 @@ const Navbar = () => {
                             </li>
                             <li>
                                 {/* Theme Toggle with custom wrapper */}
-                                <div className="flex  items-center gap-2">
+                                {/* <div className="flex  items-center gap-2">
                                     <p className="text-md ml-3">Theme:</p>
                                     <ThemeToggle />
-                                </div>
+                                </div> */}
                             </li>
                         </>
                     ) : (

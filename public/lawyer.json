@@ -1,0 +1,332 @@
+[
+    {
+        "id": 1,
+        "category": "Criminal Lawyer",
+        "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1746549326/samples/people/kitchen-bar.jpg",
+        "lawyers": [
+            {
+                "id": 101,
+                "name": "Adv. Rahim Khan",
+                "image": "https://imgur.com/a/WoXpqZq",
+                "experience": "8 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 102,
+                "name": "Adv. Samin Akter",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "6 years",
+                "location": "Chittagong",
+                "rating": 3
+            },
+            {
+                "id": 103,
+                "name": "Adv. Rahim Khan",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "8 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 104,
+                "name": "Adv. Samin Akter",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "6 years",
+                "location": "Chittagong",
+                "rating": 3
+            },
+            {
+                "id": 105,
+                "name": "Adv. Rahim Khan",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "8 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 106,
+                "name": "Adv. Samin Akter",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "6 years",
+                "location": "Chittagong",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Family Lawyer",
+        "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099650/GettyImages-1198436011_30196c9a4_hskeqn.avif",
+        "lawyers": [
+            {
+                "id": 201,
+                "name": "Adv. Nusrat Jahan",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "7 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 202,
+                "name": "Adv. Farhana Islam",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "5 years",
+                "location": "Sylhet",
+                "rating": 3
+            },
+            {
+                "id": 203,
+                "name": "Adv. Nusrat Jahan",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 204,
+                "name": "Adv. Farhana Islam",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "5 years",
+                "location": "Sylhet",
+                "rating": 3
+            },
+            {
+                "id": 205,
+                "name": "Adv. Nusrat Jahan",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 206,
+                "name": "Adv. Farhana Islam",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "5 years",
+                "location": "Sylhet",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Corporate Lawyer",
+        "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+        "lawyers": [
+            {
+                "id": 301,
+                "name": "Adv. Tanvir Rahman",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "10 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 302,
+                "name": "Adv. Laila Sultana",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "8 years",
+                "location": "Chittagong",
+                "rating": 3
+            },
+            {
+                "id": 303,
+                "name": "Adv. Tanvir Rahman",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "10 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 304,
+                "name": "Adv. Laila Sultana",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "8 years",
+                "location": "Chittagong",
+                "rating": 3
+            },
+            {
+                "id": 305,
+                "name": "Adv. Tanvir Rahman",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "10 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 306,
+                "name": "Adv. Laila Sultana",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "8 years",
+                "location": "Chittagong",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Divorce Lawyer",
+        "image": "https://i.ibb.co.com/P69Y1Wb/Screenshot-14.png",
+        "lawyers": [
+            {
+                "id": 401,
+                "name": "Adv. Shaila Amin",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 402,
+                "name": "Adv. Kamal Hossain",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Khulna",
+                "rating": 3
+            },
+            {
+                "id": 403,
+                "name": "Adv. Shaila Amin",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 404,
+                "name": "Adv. Kamal Hossain",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Khulna",
+                "rating": 3
+            },
+            {
+                "id": 405,
+                "name": "Adv. Shaila Amin",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 406,
+                "name": "Adv. Kamal Hossain",
+                "image": "https://res.cloudinary.com/dw7wcvbpr/image/upload/v1764099834/Screenshot_10_uxkxdf.png",
+                "experience": "7 years",
+                "location": "Khulna",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Tax Lawyer",
+        "image": "https://i.ibb.co.com/rmMy6Pg/Screenshot-21.png",
+        "lawyers": [
+            {
+                "id": 501,
+                "name": "Adv. Salman Rahman",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "12 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 502,
+                "name": "Adv. Ayesha Siddiqua",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "10 years",
+                "location": "Rajshahi",
+                "rating": 3
+            },
+            {
+                "id": 503,
+                "name": "Adv. Salman Rahman",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "12 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 504,
+                "name": "Adv. Ayesha Siddiqua",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "10 years",
+                "location": "Rajshahi",
+                "rating": 3
+            },
+            {
+                "id": 505,
+                "name": "Adv. Salman Rahman",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "12 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 506,
+                "name": "Adv. Ayesha Siddiqua",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "10 years",
+                "location": "Rajshahi",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Property Lawyer",
+        "image": "https://i.ibb.co.com/B6HgJjz/Screenshot-17.png",
+        "lawyers": [
+            {
+                "id": 601,
+                "name": "Adv. Rubel Mahmud",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 602,
+                "name": "Adv. Nabila Hossain",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Barisal",
+                "rating": 3
+            },
+            {
+                "id": 603,
+                "name": "Adv. Rubel Mahmud",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 604,
+                "name": "Adv. Nabila Hossain",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Barisal",
+                "rating": 3
+            },
+            {
+                "id": 605,
+                "name": "Adv. Rubel Mahmud",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "9 years",
+                "location": "Dhaka",
+                "rating": 3
+            },
+            {
+                "id": 606,
+                "name": "Adv. Nabila Hossain",
+                "image": "https://i.ibb.co.com/Wsg4Qkc/Screenshot-23.png",
+                "experience": "7 years",
+                "location": "Barisal",
+                "rating": 3
+            }
+        ]
+    }
+]
