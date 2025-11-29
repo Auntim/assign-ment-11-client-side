@@ -69,7 +69,7 @@ export default function LawyerList() {
                         </div>
 
                         {/* Open the modal using document.getElementById('ID').showModal() method */}
-                        <button className="bg-blue-500 px-3 py-2 rounded-xl" onClick={() => document.getElementById('my_modal_5').showModal()}>Book Now</button>
+                        <button className="bg-blue-500 px-3 py-2 rounded-xl" onClick={() => document.getElementById('my_modal_5').showModal()}>View Details</button>
                         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                             <div className="modal-box dark:bg-gray-800">
                                 <h3 className="font-bold text-lg">Hey! Client</h3>

@@ -76,56 +76,56 @@ function Registrar() {
             <div className="card border-2 mt-24 text-white w-full max-w-sm shadow-2xl 
              mx-6 md:mx-0">
                 <form onSubmit={handleSignUp} className="card-body">
-                    <h2 className="text-xl md:text-2xl text-center font-bold text-black">Create Account</h2>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="text-xl font-semibold">Name</span>
+                    <h2 className="text-xl md:text-2xl text-center font-bold text-black"><span className='text-amber-400'>Lewio</span> Account</h2>
+                    <div className="">
+                        <label className="block text-sm font-medium mb-1 text-black">
+                            Name
                         </label>
                         <input
                             type="text"
                             placeholder="name"
                             name="name"
-                            className="input input-bordered text-black"
+                            className="input input-bordered text-black w-full"
                             required
                         />
                     </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="text-xl font-semibold">Photo Url</span>
+                    <div className="">
+                        <label className="block text-sm font-medium mb-1 text-black">
+                            PhotoUrl
                         </label>
                         <input
                             type="text"
                             placeholder="Photo url"
                             name="photo"
-                            className="input input-bordered text-black"
+                            className="input input-bordered text-black w-full"
                             required
                         />
                     </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="text-xl font-semibold">Email</span>
+                    <div className="">
+                        <label className="block text-sm font-medium mb-1 text-black">
+                            Email
                         </label>
                         <input
                             type="email"
                             placeholder="email"
                             name="email"
-                            className="input input-bordered text-black"
+                            className="input input-bordered text-black w-full"
                             required
                         />
                     </div>
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="text-xl font-semibold">Password</span>
+                    <div className="">
+                        <label className="block text-sm font-medium mb-1 text-black">
+                            Password
                         </label>
                         <input
                             type="password"
                             placeholder="password"
                             name="password"
-                            className="input input-bordered text-black"
+                            className="input input-bordered text-black w-full"
                             required
                         />
                         <label className="flex justify-center items-center">
-                            <p className="text-center my-3 label-text-alt text-black text-[18px]">
+                            <p className="text-center mt-4 label-text-alt text-black text-[18px]">
                                 Already have an Account?{' '}
                                 <span>
                                     <Link to="/login" className="text-blue-500 hover:underline">
@@ -136,8 +136,8 @@ function Registrar() {
                         </label>
                     </div>
                     {error && <p className="text-red-500 text-sm">{error}</p>}
-                    <div className="form-control mt-6">
-                        <button className="btn btn-primary dark:text-white">Sign Up</button>
+                    <div className="w-full mt-6">
+                        <button className="bg-amber-500 w-full px-3 py-2 rounded-lg dark:text-white">Sign Up</button>
                     </div>
                 </form>
             </div>

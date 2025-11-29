@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function ServiceCard({ service }) {
 
     return (
-        <div className=' bg-purple-100 rounded-xl dark:bg-medium dark:border-2 '>
+        <div className=' bg-purple-100 rounded-xl dark:bg-medium dark:border-2 p-2'>
             <img
                 src={service.imageUrl}
                 alt={service.serviceName}
@@ -29,7 +29,7 @@ function ServiceCard({ service }) {
                     </p>
                 </div>
                 <p className="text-lg font-bold text-orange-500 mt-1 text-start">
-                    Price: ${service.price}
+                    Price: {service.price}K
                 </p>
                 <Link
                     to={`/services/${service._id}`}

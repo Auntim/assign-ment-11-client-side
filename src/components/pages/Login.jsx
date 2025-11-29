@@ -55,7 +55,14 @@ function Login() {
             </div>
             <div className="card text-white w-full max-w-sm shadow-2xl border-2 mx-6 md:mx-0 mt-24 ">
                 <div className="card-body">
-                    <h2 className="text-2xl font-bold mb-4 text-center text-black">Login Now!</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-center text-black"><span className='text-amber-400'>Login</span> Now!</h2>
+                    <button
+                        onClick={handleGoogleLogin}
+                        className="btn btn-outline w-[80%] mx-auto flex items-center justify-center gap-2 mb-3 dark:text-white dark:bg-slate-900 "
+                    >
+                        <FaGoogle className="w-5 h-5" />
+                        Continue with Google
+                    </button>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                         <div>
@@ -99,23 +106,15 @@ function Login() {
                         </div>
 
                         {/* Submit Button */}
-                        <button type="submit" className="btn btn-primary w-full">Login</button>
+                        <button type="submit" className="bg-amber-500  px-3 py-2 rounded-lg w-full">Login</button>
                         <p className='text-center text-black dark:text-black'>
                             Don't have an account? <Link to="/register" className="text-blue-500 hover:underline">Register</Link>
                         </p>
                     </form>
 
-                    {/* Divider */}
-                    <div className="divider">OR</div>
 
-                    {/* Google Sign-In Button */}
-                    <button
-                        onClick={handleGoogleLogin}
-                        className="btn btn-outline w-full flex items-center justify-center gap-2 dark:text-white dark:bg-slate-900"
-                    >
-                        <FaGoogle className="w-5 h-5" />
-                        Sign in with Google
-                    </button>
+
+
                 </div>
             </div>
         </div>

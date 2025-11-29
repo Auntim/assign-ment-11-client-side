@@ -8,3 +8,15 @@
 body {
     font-family: "Roboto", serif;
 }
+
+::selection {
+    background: rgb(247, 247, 15);
+    /* selection highlight color */
+    color: black;
+    /* text color while selected */
+}
+
+::-moz-selection {
+    background: rgb(97, 97, 5);
+    color: black;
+}
