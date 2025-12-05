@@ -1,8 +1,8 @@
 ✌️Lewio - Lawyer Service Sharing ✌️
 
 Live Link:-https://laywer-service.web.app/
-Client Repu Link:https://github.com/programming-hero-web-course2/b10a11-client-side-Auntim
-Server Repu Link:https://github.com/programming-hero-web-course2/b10a11-server-side-Auntim
+Client Repu Link:https://github.com/Auntim/assign-ment-11-client-side
+Server Repu Link:https://github.com/Auntim/assign-ment-11-server-side
 
 
 About Lewio:👇
@@ -38,3 +38,10 @@ Frontend: React, Tailwind CSS, DaisyUI, React Router DOM, Bootstrap
 Backend: Node.js, Express.js
 Database: MongoDB
 Authentication: Firebase & JWT
+
+6.How to run this project?
+1-git clone https://github.com/your-repo.git
+2-cd your-folder
+3-npm install
+4-Frontent:npm run dev
+5-Backend:nodemon index.js
